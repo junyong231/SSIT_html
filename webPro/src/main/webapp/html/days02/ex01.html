@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="Generator" content="VS CODE">
+    <meta name="Author" content="PARK">
+    <meta name="Keywords" content=""> <!-- 검색할 때..  -->
+    <meta name="Description" content="html의 기본구조 설명 예제">
+    <title>html의 기본 구조 설명</title>
+</head>
+
+<body>
+    <h3>html 기본구조</h3>
+    <!-- 주석 -->
+    <!-- 기본 구조. -->
+    <!-- <!DOCTYPE html> : 선언문 ( ! 가 붙어있음 ) html5 문법 따르는 !선언문-->
+    <!-- <html> 루트 요소 (얘 접으면 모든 태그 다 접힘) -->
+    <!-- html 문서의 시작과 끝을 알림.. -->
+    <!-- 자식 태그 -->
+    <!--    1) <head> 자식요소 : html 문서에 대한 '메타 정보' 포함 . 필수 X-->
+    <!--        메타 정보 ? <title>에 글 넣으면 브라우저에서 탭이름 적용됨 (문서의 제목 지정)-->
+    <!--        <meta charset="UTF-8"> 문자 set( 인코딩 )-->
+
+    <!--    2) <body> 자식요소 : 필수 O , 화면에 표시되는 모든 내용 (컨텐츠) 담는 컨테이너 역할 -->
+    <!--                        제목, 본문 내용 , 표 ,하이퍼링크 등등등.. -->
+    <!-- 요소 : 시작태그 + 내용 + 닫기종료 -->
+    <!-- 참고 : 내용이 없는 태그를 빈 요소라고 하고, 빈 요소는 종료 태그가 없다  -->
+
+
+    주석 참조<br>
+<!-- 공백 \t    \n  -->
+    1.  이   시훈
+    2. 최   사랑
+    3. 김   준석
+    4. 김   선우
+<!-- 여러칸 띄어쓰기 , 개행 안됨 -->
+<!-- 
+        html entity  ( 예약어.. )
+    형식: &엔터티문자(이름);  또는  &#엔티티숫자(16진수);
+    예) 공백 한 칸 ? &non-breaking space; 
+                ==  &nbsp;
+-->
+    5.&nbsp;&nbsp;&nbsp;박&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;준용
+    
+    <br><html> 태그는 루트 엘리먼트이다. <!--태그로 인식해서 출력안됨 ==  렌더링 시키지 않는다-->
+<!-- < 는 &lt; >는 &gt; -->
+    &lt;html&gt; 태그는 루트 엘리먼트이다.
+
+<!-- 개행 ? <br>  <br>은 빈요소 (내용없음)이기 때문에 닫기 태그 없다-->
+<br>7.&copy;이 몽룡
+
+
+</body>
+
+</html>

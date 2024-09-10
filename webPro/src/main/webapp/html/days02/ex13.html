@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script>
+// 함수 만들자 
+function bookmark() {
+    //console.log("bookmark() 호출 완료") 테스트 ㅇㅋ
+    //d1.ex01 webid로 이동해보자
+    //location.href= 이동할 url
+    var url = "http://localhost/webPro/html/days01/ex01.html#webid"; //절대경로 변수선언
+    location.href= url;
+}   
+</script>
+</head>
+<body>
+<!-- 
+    a 링크 태그...
+    1) 다른 페이지로 이동 (하이퍼 링크)    
+    2) 책갈피 기능 (스크롤 이동)
+    3) js 처리할 수 있음 ★★★
+
+-->
+<!-- href 에다가 경로(url)가 아닌 js 코드를 넣기- 접두사 javascript: (길어지면 함수로 때움)  -->
+<!-- 경고: window.alert()  //브라우저가 제공하는 객체 BOM -->
+
+<a href='javascript:window.alert( "야. 너 경고. " )'>경고창 띄우기</a><br>
+<a href='javascript:alert( "야. 너 경고. " )'> BOM 중에 window 내장 객체는 최상위 객체라서 생략 가능 ..경고창 띄우기</a><br>
+<a href='javascript:bookmark()'>js북마크 함수 d1.ex01.#webid로 이동</a><br>
+
+<a href="mailto:admin@naver.com">관리자한테 메일보내기</a><br> 
+<!-- 메일 서버 있으면 메일보내기도 가능 a태그로 -->
+
+</body>
+</html>

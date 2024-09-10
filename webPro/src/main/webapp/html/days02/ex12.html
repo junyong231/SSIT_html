@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    /*
+    a:link{color: rgb(60, 179, 80); text-decoration: none;}  /* a:link 방문전 링크
+    a:visited{color: rgba(8, 38, 104, 0.582);text-decoration: none;} /* a:visited 방문한 링크
+    a:hover{color: rgb(255, 0, 0);} /* a:hover 링크 마우스 올렸을 때
+    a:active{color: rgb(196, 144, 196);text-decoration: overline underline line-through;} a:active 링크 눌렀을 때
+    */
+    
+        /* 하나씩 말고 전체에 적용 */
+    a{
+        color: red;
+        text-decoration: underline;
+        /* text-transform: uppercase;  */
+        /* 대문자로 다 바뀜 */
+
+        text-transform: capitalize;
+        /* 첫문자만 대문자로 */
+    }
+
+    </style>
+</head>
+<body>
+
+<!-- 책갈피 구현 -->
+<!-- 웹페이지의 특정 부분으로 바로 이동하는 기능-->
+<!-- 특정 웹페이지가 매우 긴 경우 유용한 기능이다 -->
+<!-- 원하는 위치로 자동 스크롤이 된다 -->
+
+<!-- day01 ex01에 웹브라우저 설명란에 id걸어놓음 -->
+<a href="../days01/ex01.html#webid">../days01/ex01.html</a><br>
+
+
+
+<h3>html의 링크(link) 태그 </h3>
+a링크 태그에 target 속성 설명: <br>
+링크된 문서를 열 위치 지정.. <br>
+기본값: target="_self" : 자기 자신 탭에서 문서를 연다<br>
+_blank (새탭), _top(창 전체에서 연다), _parent(상위 프레임 문서를 연다) 가 있음..<br>
+
+
+<a href="../days01/ex02.html" target="_blank">days01/ex02.html (blank)</a><br><br><br>
+
+
+
+<!-- link = 사용자가 링크를 통해서 다른 페이지로 이동할 수 있는 태그 <br>
+- a태그 , 커서 올리면 모양 손모양으로 바뀜 , 텍스트, 이미지, 다른 html요소에 적용됨-->
+<a href="https://www.naver.com">네이버</a> <br><br><br>
+<!-- == 하이퍼 링크 -->
+
+<a href="">href 안주면 자기 자신 url 걸려있다</a> <br><br><br>
+
+<a href="#">href에 #(책갈피)하나 주면..?</a><br><br><br>
+
+<a href="https://www.daum.net">다음</a> <br><br><br>
+<!-- 절대 경로 -->
+<a href="http://localhost/webPro/html/days01/ex01.html">절대경로 d1.ex01</a><br><br><br>
+
+
+<a href="../days01/ex01.html">상대경로 days01.ex01</a><br><br><br>
+<a href="/webPro/html/days02/ex01.html">상대경로 days02.ex01</a><br><br><br>
+<!-- 상대경로 -->
+<a href="./ex01.html">./ex01.html</a><br><br><br>
+<a href="../days01/ex01.html">../days01/ex01.html</a><br><br><br>
+
+파랑: 안눌러봄<br>
+빨강: 누를 때<br>
+보라: 눌러봄
+
+</body>
+</html>
