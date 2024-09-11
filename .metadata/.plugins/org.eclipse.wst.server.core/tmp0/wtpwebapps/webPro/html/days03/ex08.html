@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<style>
+      /* table{
+        border: solid 1px #555;
+        width: 100%;
+          /* 테이블 부모는 body태그. body의 100% 차지   */
+          /* border-collapse: collapse;   */
+          /* 테이블 이중 테두리 없애줌   */
+    
+     /* }  */
+     /* th,td{  */
+         /* border: solid 1px #555;  */
+   
+     /* }    */
+</style>
+<style>
+    tbody tr:hover{
+        background-color: rgb(44, 44, 88);
+        cursor:crosshair;
+    }
+    tr{
+        background-color: rgb(238, 219, 108);
+    }
+    /* tbody tr:nth-child(odd) { 홀수행만 표시
+        background-color: rgb(235, 79, 79);
+    } */
+    thead tr th, tfoot tr td {
+        background-color: rgb(95, 224, 224);
+        color: rgb(226, 124, 124);
+    }
+    
+</style>
+</head>
+<body>
+<!-- table 
+데이터를 행/열로 출력하는 용도 
+행 table row (tr)
+열 table data (rd)
+테이블 헤더: 컬럼명 (th)
+
+
+태그 -->
+
+<!--
+deptno   dname           loc  th     
+10       ACCOUNTING      NEW YORK   <br> 
+20     RESEARCH      DALLAS<br>      
+30      SALES         CHICAGO<br>         
+40      OPERATIONS      BOSTON<br>
+-->
+<!-- <table border="1" style="width: 100%; cellpadding:5px; cellspacing:10px" > 옛날코딩 -->
+<!-- <table border="1" style="width: 100%; border-spacing: 10px;" > -->
+<table border="1" style="width: 100%;" >
+<caption>DEPT 정보</caption>
+<thead>
+<tr>
+    <th>deptno</th>
+    <th>dname</th>
+    <th>loc</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+    <td>10</td>
+    <td>ACCOUNTING</td>
+    <td>NEW YORK</td>
+</tr>
+<tr>
+    <td>20</td>
+    <td>RESEARCH</td>
+    <td>DALLAS</td>
+</tr>
+<tr>
+    <td>30</td>
+    <td>SALES</td>
+    <td>CHICAGO</td>
+</tr>
+<tr>
+    <td>40</td>
+    <td>OPERATIONS</td>
+    <td>BOSTON</td>
+</tr>
+</tbody>
+<tfoot>
+<tr>
+    <td colspan="3" align="right">footer</td>
+    <!-- 컬럼 '3'칸 합친 td 한놈 -->
+</tr>
+</tfoot>
+</table>
+<br>
+<!-- 2행 2열 테이블  border="1"-->
+
+    <!-- <table  style="width: 100%;">
+        <tr>
+            <td>안가을 기자</td>
+            <td rowspan="2" align="right">
+                <img src="https://static.fnnews.com/resources/w/img/ico_zoom.svg" alt="줌">
+                <img src="https://static.fnnews.com/resources/w/img/ico_zoomOut.svg" alt="줌아웃">
+                <img src="https://static.fnnews.com/resources/w/img/ico_print.svg" alt="인쇄">
+            </td>
+           위아래 셀 합쳐짐 (2칸) -->
+        <!-- </tr>
+        
+        <tr>
+            <td>파이낸셜뉴스 입력 2024.09.11 07:58 수정 2024.09.11 10:28</td>
+        </tr>
+
+    </table> --> 
+
+</body>
+</html>

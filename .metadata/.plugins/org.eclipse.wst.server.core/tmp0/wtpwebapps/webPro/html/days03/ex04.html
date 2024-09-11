@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+    <script>
+// script위치는 어디든 ㅇㅋ
+        function areaClick() {
+            window.alert("커피 영역 클릭 !!!");
+        }
+
+    </script>
+</head>
+<body>
+<!-- 
+    [이미지 맵]
+    ㄴ 맵 == 지도
+    ㄴ 하나의 이미지를 클릭 가능한 영역 나눠서 -> 다른 작업 수행
+    ㄴ <map> : 이미지 맵을 정의
+       <area> : 클릭 가능한 영역
+       usemap 속성..
+
+    파일 추가 .. : 
+    ex04_coffee.html
+    ex04_computer.html
+    ex04_phone.html
+-->
+
+<img usemap="#workmap" src="../../images/workplace.jpg" alt="워크플레이스 사진">
+<!-- 노트북 부분/ 스마트폰 부분/ 커피 부분 다 나눠서 클릭 링크 다르게 하기 -->
+<map name="workmap">
+    <area alt="computer" shape="rect" coords="34,44,270,350" href="ex04_computer.html">
+    <area alt="phone" shape="rect"  coords="290,172, 333, 250" href="ex04_phone.html">
+    <!-- javascript로 커피에다가 클릭 이벤트를 처리해보자 -->
+     <!-- onclick = "자바스크립트 코드(함수)" -->
+    <area onclick="areaClick()" alt="coffee" shape="circle"  coords="337,300,44" href="ex04_coffee.html"> <!-- 원은 원점 좌표, 반지름-->
+    
+</map>
+
+
+</body>
+</html>
