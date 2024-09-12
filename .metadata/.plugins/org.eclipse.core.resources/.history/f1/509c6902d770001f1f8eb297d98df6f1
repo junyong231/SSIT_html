@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+<!-- 더미 텍스트 생성 Lorem ipsum-->
+<!-- div>lorem  -->
+
+<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+Perspiciatis ad eligendi repellendus nemo pariatur obcaecati delectus officiis quis neque debitis cumque
+ provident tempora accusamus perferendis minus voluptatum totam magni aut.</div>
+
+
+
+
+
+
+
+
+
+</body>
+</html>

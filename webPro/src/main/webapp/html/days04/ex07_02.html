@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+<!-- 더미 텍스트 생성 Lorem ipsum-->
+<!-- div>lorem (30단어) -->
+<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+Perspiciatis ad eligendi repellendus nemo pariatur obcaecati delectus officiis quis neque debitis cumque
+ provident tempora accusamus perferendis minus voluptatum totam magni aut.</div>
+
+div>lorem1
+<div>Lorem.</div>
+
+div>lorem5
+<div>Lorem ipsum dolor sit amet.</div>
+
+ul>li*5>lorem1
+<ul>
+	<li>Lorem.</li>
+	<li>Velit.</li>
+	<li>Deserunt!</li>
+	<li>Inventore!</li>
+	<li>Aliquid!</li>
+</ul>
+
+ul.generic-list>li.item*5>lorem10
+<ul class="generic-list">
+	<li class="item">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe porro!</li>
+	<li class="item">Repudiandae quasi quidem cum maiores ipsa? Inventore odio sed blanditiis!</li>
+	<li class="item">Nostrum quasi quia modi vel quod beatae repudiandae doloribus minima.</li>
+	<li class="item">Assumenda commodi dolores nulla iusto ipsam magnam animi excepturi qui.</li>
+	<li class="item">Tempora amet consectetur asperiores omnis quibusdam maiores minima nesciunt debitis.</li>
+</ul>
+
+암묵적으로.. 이름을.. 생략할 수도 있다.... -부모 태그를 살펴보면 무엇이 생략되었는지 알 수 있다.
+ul>li.item*3>lorem1
+둘은 같은 결과를 갖는다
+ul>.item*3>lorem1
+
+div#box+div#sample
+얘네랑 비슷
+#box+#sample
+
+em>span.info
+둘은 같다
+em>.info
+
+table>#row$*4>[colspan=2]
+tr, td 알아서 들어감
+<table>
+	<tr id="row1">
+		<td colspan="2"></td>
+	</tr>
+	<tr id="row2">
+		<td colspan="2"></td>
+	</tr>
+	<tr id="row3">
+		<td colspan="2"></td>
+	</tr>
+	<tr id="row4">
+		<td colspan="2"></td>
+	</tr>
+</table>
+
+
+
+#page>.logo+ul#navigation>li*5>a
+<div id="page">
+	<div class="logo"></div>
+	<ul id="navigation">
+		<li><a href=""></a></li>
+		<li><a href=""></a></li>
+		<li><a href=""></a></li>
+		<li><a href=""></a></li>
+		<li><a href=""></a></li>
+	</ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

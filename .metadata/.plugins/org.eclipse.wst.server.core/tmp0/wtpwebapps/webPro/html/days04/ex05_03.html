@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<style>
+    div{
+        background-color: rgb(247, 247, 99);
+    }
+    span{
+        border: 1px solid red;
+        
+    }
+</style>
+</head>
+<body>
+
+<button id="btnSh">숨기기</button>
+
+<br>
+<div id="demo">
+    <span>홍길동</span><br>
+    <span>옥동자</span><br>
+    <span>와일드바디</span><br>
+</div>
+<script>
+/*
+$("#btnSh").click(function(){
+    console.log("click");
+}); 사라지니까 쓰지마라
+*/ 
+var sw = false;
+
+if ( !sw ) {
+    $("#btnSh").on("click", function() {
+    console.log("click");
+    $("#demo").css("visibility", "hidden");
+    $(this).text("보이기");
+
+});
+} else{
+    $("#btnSh").on("click", function() {
+    console.log("click2");
+    $("#demo").css("visibility", "visible");
+    $(this).text("숨기기");
+
+});
+}
+
+
+</script>
+</body>
+</html>

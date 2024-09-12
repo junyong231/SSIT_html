@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<style>
+
+</style>
+</head>
+<body>
+<!-- emmet의 구문 -->
+<!-- ctrl + e -->
+
+<!-- 중첩연산자 ' > ' -->
+<!-- div>ul>li*3  공백X--> 
+<div>
+	<ul>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+</div>
+
+
+<!-- 형제레벨 여러개 만들기 -->
+<!-- div>div+p+span '+' 연산자-->
+<div>
+	<div></div>
+	<p></p>
+	<span></span>
+</div>
+
+
+<div></div>
+<div>
+	<p>
+	<span></span>
+	<em></em>
+	</p>
+</div>
+
+
+<!-- 한단계 올라가기 ' ^ ' -->
+<!-- div>p>span+em^^div -->
+<div>
+	<p><span></span><em></em></p>
+</div>
+<div></div>
+
+
+div+div>p>span+em^^bq
+혹은
+div+(div>p>span+em)+bq
+
+(ul>li*3)*2
+혹은
+ul*2>li*3
+
+div>(header>ul>li*2>a)+footer>p
+
+(div>dl>(dt+dd)*3)+footer>p
+
+<!-- 속성에 사용되는 연산자.... -->
+<!--  [  ] 안에 id 등등 넣으면 됨 -->
+
+
+
+<!-- ' . ' == id -->
+<div id="demo"></div>
+<!-- #demo     생략시 div 나옴-->
+<div id="demo"></div>
+<!-- .box         얘도 div -->
+<div class="box"></div>
+
+<div id="demo" class="box"></div>
+<!-- #footer.class1.class2.class3 -->
+<div id="footer" class="class1 class2 class3"></div>
+<!-- td[colspan=3][title="Hello world"] -->
+<td colspan="3" title="Hello world"></td>
+<!-- td[colspan=3 title="Hello world"] -->
+
+<!-- item에 번호 자동 붙이기 $-->
+ul>li*5>{item$}
+
+<!-- ul>li.item$*5>{item$}  -->
+<ul>
+	<li class="item1">item1</li>
+	<li class="item2">item2</li>
+	<li class="item3">item3</li>
+	<li class="item4">item4</li>
+	<li class="item5">item5</li>
+</ul>
+
+
+
+</body>
+</html>

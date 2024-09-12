@@ -8,10 +8,6 @@
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <style>
-table {
-	width: 100%;
-}
-
 table, th, td {
 	border: solid 1px gray;
 	border-collapse: collapse;
@@ -21,6 +17,19 @@ table, th, td {
 td {
 	text-align: center;
 }
+
+.sun{
+    color: red;
+}
+
+.holi{
+    color: red;
+    background-color: rgba(238, 79, 58, 0.555);
+    
+}
+.today {
+    background-color: rgba(80, 203, 252, 0.301);
+}
 </style>
 </head>
 <body>
@@ -29,16 +38,22 @@ td {
     col, colgroup 태그 
         ㄴ 특정 열에 스타일을 지정하기 위한 태그.
         ㄴ width, visibility, background, border 속성만 제한적으로 설정할 수 있다.
-
+        (color 안됨 - 글자색만 변경 불가)
     속성으로 보였다 안보였다 (제이쿼리로 hide, show했던거)
     display = "none" 
     display = "inline"
 
 -->
 
-	<table>
+	<table style="width: 100%;">
+        <colgroup>
+        <col style="width:100px; background-color: rgba(255, 0, 0, 0.281);">
+        <col span="5">
+        <col style="width: 100px;">
+        <!-- 첫 col은 (SUN) , span으로 합친건 평일들. -->
+        </colgroup>
 		<tr>
-			<th>SUN</th>
+			<th class="sun">SUN</th>
 			<th>MON</th>
 			<th>TUE</th>
 			<th>WED</th>
@@ -47,7 +62,7 @@ td {
 			<th>SAT</th>
 		</tr>
 		<tr>
-			<td>1</td>
+			<td class="sun">1</td>
 			<td>2</td>
 			<td>3</td>
 			<td>4</td>
@@ -56,25 +71,25 @@ td {
 			<td>7</td>
 		</tr>
 		<tr>
-			<td>8</td>
+			<td class="sun">8</td>
 			<td>9</td>
 			<td>10</td>
-			<td>11</td>
+			<td ><span class="today" title="오늘">11</span></td>
 			<td>12</td>
 			<td>13</td>
 			<td>14</td>
 		</tr>
 		<tr>
-			<td>15</td>
-			<td>16</td>
-			<td>17</td>
-			<td>18</td>
+			<td class="sun">15</td>
+			<td class="holi" >16</td>
+			<td class="holi">17</td>
+			<td class="holi">18</td>
 			<td>19</td>
 			<td>20</td>
 			<td>21</td>
 		</tr>
 		<tr>
-			<td>22</td>
+			<td class="sun">22</td>
 			<td>23</td>
 			<td>24</td>
 			<td>25</td>

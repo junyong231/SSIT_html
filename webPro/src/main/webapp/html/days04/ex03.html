@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<style>
+    html{
+        margin: 0;
+        padding: 0;
+    }
+    ul {
+        border: solid 1px rgb(0, 0, 177);
+        background-color: bisque;
+        list-style: none;
+        /* 이거 해야 목록표시 마크 아예 없애는 것 */
+
+        padding: 0;  
+       /* ul의 목록표시 마크는 패딩에 있던거였음 */
+        margin: 0;
+        overflow: hidden;
+    }
+    ul#main li a{
+        color: rgb(0, 83, 44);
+        text-decoration: none;
+        /* border: 1px solid red; */
+        padding: 16px;
+        /* inline -> block 모드 변경 */
+        display: block;
+    }
+    ul#main li {
+        /* 이미지 플로팅 */
+        float: left;
+
+    }
+    ul#main li:nth-child(1) { /*첫번째놈 */
+        background-color: rgba(0, 231, 104, 0.411);
+    }
+    ul#main li:last-child { /*마지막놈 */
+        float: right;
+    }
+    /* 활성화된 메뉴  */
+    ul#main li a.active{
+        background-color: rgba(137, 43, 226, 0.452);
+        color: aliceblue;
+    }
+    ul#main li a:hover:not(a.active){
+        background-color: chocolate;
+    }
+</style>
+</head>
+<body>
+<!-- 
+    ul#main>li*4>a
+    a 인라인 (내용물 만큼 너비가 잡힘)
+    li 블럭 (한 줄 다먹음)
+-->
+<ul id="main">
+    <li><a href="#">Home</a></li>
+    <li><a href="#" >News</a></li>
+    <li><a href="#" class="active">Contact </a></li>
+    <li><a href="#">About</a></li>
+</ul>
+</body>
+</html>
