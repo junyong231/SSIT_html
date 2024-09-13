@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Insert title here</title>
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="http://localhost/webPro/images/SiSt.ico"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <form>색상 ; <input type="color" id="color" />
+    <br />
+    설문 시작 날짜 : <input type="date" id="servey_start" /><br />
+    설문 종료 날짜 : <input type="date" id="servey_end" min="2024-09-01" max="2024-09-30" /><br />
+    <br>
+    <input type="button" value="입력값 확인" id="btnRun">
+    </form>
+
+    <p id="demo"></p>
+
+    <script>
+      // 제이쿼리로 해보자
+
+      $("#btnRun").on("click", function(){
+        //alert("zz");
+        var color = $("#color").val();
+        //val은 밸류값 얻어옴  
+        var result = "색상 : " + color + "<br>";
+        result += "설문 시작일 : " + $(servey_start).val() + "<br>";
+        result += "설문 종료일 : " + $(servey_end).val() + "<br>";
+        // demo.style.color=color.value; 이건
+        $("#demo").css("color", color).html(result);
+        // 변수에서 컬러에 밸류값 넣어놨음 그냥 color만 써주면 ㅇㅋ
+
+        // $("#demo").html(result);
+
+
+      });
+
+      
+    
+
+
+
+    </script>
+
+
+  </body>
+</html>

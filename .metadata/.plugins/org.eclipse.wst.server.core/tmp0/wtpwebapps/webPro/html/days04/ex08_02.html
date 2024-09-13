@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- 뷰포트: 기기에 맞춰 화면 배율 등 제어하는 것 -->
+ <style>
+h3{
+    background-color: bisque;
+}
+h3::before{
+    /* 의사요소 */
+    content: url(../../images/17797133000319380837.png);
+
+}
+h3::after{
+    content: "!!!!!!!!!~~~~~~~~";
+    /* 문자열 뒤에 추가됨 -> 나중에 유지보수하기 좋게 after 의사요소 사용 */
+}
+h3:active{
+    content: url(../../images/cellphone.jpg);
+    
+}
+
+
+ </style>
+</head>
+<body>
+
+<!-- 
+    :   의사클래스(가상)        a:hover()
+    ::  의사요소               div#section::after()
+            ㄴ 요소의 지정된 부분에 스타일을 지정하는데에 사용함
+            ㄴ 요소의 첫번째 글자나, 첫번째 줄의 스타일을 지정하는데에도 사용함
+            ㄴ 요소의 내용(content)앞이나 뒤의 다른 내용 삽입하는데에도 사용함
+-->
+
+
+<h3>Lorem ipsum dolor sit amet.</h3>
+<h3>Error quis modi non doloribus?</h3>
+<h3>Sequi earum quia hic quae.</h3>
+
+
+
+<script>
+
+
+</script>
+
+
+
+
+</body>
+</html>

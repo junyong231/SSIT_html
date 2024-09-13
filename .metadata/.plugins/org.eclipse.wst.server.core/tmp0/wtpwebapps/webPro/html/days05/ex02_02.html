@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+/* 
+    class=teamLeader
+    ㄴ 클래스명 대소문자 구분함..
+    ㄴ id도 마찬가지임
+    ㄴ 중간에 공백 사용 불가 / 숫자로 시작 X
+
+*/
+
+.team1 {
+    background-color: yellow;
+}
+.team2{
+    background-color: green;
+}
+li.teamLeader {
+    color: red;
+}
+
+
+</style>
+</head>
+<body>
+
+<div class="team1">
+    <ul>
+        <li class="teamLeader">김준석</li>
+        <li>전재윤</li>
+        <li>박준용</li>
+        <li>송세호</li>
+        <li>이시훈</li>
+    </ul>
+</div>
+<div class="team2">
+    <ul>
+        <li class="teamLeader">원충희</li>
+        <li>김선우</li>
+        <li>김재민</li>
+        <li>최사랑</li>
+        <li>김인경</li>
+    </ul>
+</div>
+
+<!-- 팀원 클릭하면 삭제되게 해보자 -->
+<script>
+//jquery로 수정.
+
+//단계1. team2에 있는 모든 li태그 정보 얻어오기
+// $( css 선택자 )
+// jquery method each()
+// this가 뭔지는 console 찍어보는게 알기쉬움
+$(".team2 ul li").each(function( index,element ) {
+    console.log(this); //li
+  console.log( index + ": " + $( this ).text() + ": " + element.innerText );
+
+  // 제이쿼리 메서드로 click 이벤트 (삭제하기)
+  // element는 js 객체라서 jq 메서드 안통함
+  //$()필요 $(this)
+
+// 이거 쓰지 말라고 (.click)
+//   $(element).click(function(){
+//     console.log("이벤트 발생  "+ element.innerText +"  (삭제)");
+//     $(element).remove();
+
+//   });
+
+
+// $(element).on("click", function(){
+//     console.log("이벤트 발생  "+ element.innerText +"  (삭제)");
+//     $(element).remove();
+//   });
+
+//누르면 팀 폭파
+// $(element).on("click", function(){
+//     console.log("이벤트 발생  "+ $(element) +"  (삭제)");
+//     $(this).parent().remove();
+// });  
+
+//누르면 뒷사람 (뒤 인덱스 ) 삭제
+// $(element).on("click", function(){
+//     console.log("이벤트 발생  "+ $(element).next().innerText +"  (삭제)");
+//     $(this).next().remove();
+// });  
+
+//누르면 앞사람 (앞 인덱스 ) 삭제
+$(element).on("click", function(){
+    console.log("이벤트 발생  "+ $(element).prev().get(0).innerText +"  (삭제)");
+    $(this).prev().remove();
+});  
+
+});
+
+// $(".team2 ul li").each( ( index,element) => {
+//     console.log(this); // window 나옴 = 람다식..
+//   console.log( index + ": " + $( this ).text() + ": " + element.innerText );
+// });
+
+</script>
+</body>
+</html>

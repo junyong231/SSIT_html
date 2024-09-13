@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Insert title here</title>
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="http://localhost/webPro/images/SiSt.ico"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body onload="init()">
+    <form>색상 ; <input type="color" id="color" />
+    <br />
+    설문 시작 날짜 : <input type="date" id="servey_start" /><br />
+    설문 종료 날짜 : <input type="date" id="servey_end" min="2024-09-01" max="2024-09-30" /><br />
+    <br>
+    datetime-local : <input type="datetime-local"> 
+    <!-- 시간까지 선택 가능 -->
+    <br>
+    datetime : <input type="datetime">
+    <!-- 뭐냐 얜ㅋ -->
+    <br>
+    첨부파일 : <input type="file" id="attach1" name="attach">
+    <br>
+    첨부파일 : <input type="file" id="attach2" name="attach">
+    <br>
+    첨부파일 : <input type="file" id="attach3" name="attach">
+    <br>
+    다중 첨부파일 : <input type="file" id="attach4" name="attach" multiple="multiple">
+    <br>
+    <!-- 히든 타입 -->
+     <input type="hidden" name="nickname" value="Hong"><br>
+     <input type="hidden" name="age" value="10"><br>
+    <br>
+    <input type="image" src="../../images/img_submit.gif">
+    <!-- 눌러보면 ? 달고 값 다 갖고있음 == 서버 갖다옴 == 서브밋 버튼과 같음 -->
+    <br>
+    <!--년 + 월 선택할 수 있는 input 타입 (잘 안씀)-->
+    <input type="month">
+    <br>
+    국어 점수 : <input type="number" min="0" max="100" value="50">
+    <br>
+    볼륨 : <input id="vrange" type="range" value="20">
+    <button type="button" onclick="volmax()">볼륨 최대로</button>
+
+
+    <br>
+    <input type="button" value="입력값 확인" id="btnRun">
+    </form>
+
+    <p id="demo"></p>
+
+    <script>
+        document.querySelector("#btnRun").addEventListener("click",function() {
+            // alert("zzz")
+        //<input>의 모든 입력값은 value 속성값으로 얻어오기, 설정하기 가능
+        var color = document.querySelector("#color");
+        var demo = document.querySelector("#demo");
+        var servey_start = document.querySelector("#servey_start");
+        var servey_end = document.querySelector("#servey_end");
+        var result = "";
+        
+        result += "색깔 : " + color.value + "<br>" ;
+        result += "설문 시작일 : " + servey_start.value+ "<br>";
+        result += "설문 종료일 : " + servey_end.value+ "<br>";
+        demo.style.color=color.value;
+        //demo.innerText = result; 이거쓰면 br 안먹음
+        demo.innerHTML = result;
+        });
+        
+        var vrange = document.querySelector("#vrange");
+        vrange.oninput=function(){
+            
+            demo.innerHTML = "<span>" + vrange.value + "</span>";
+        }
+
+        function volmax() {
+            vrange.value = 100;
+            demo.innerHTML = "<span style=color:green>" + vrange.value + "</span>";
+        }
+
+        function init() {
+            demo.innerHTML = "<span style=color:red>" + vrange.value + "</span>" 
+        }
+
+    </script>
+
+
+  </body>
+</html>

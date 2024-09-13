@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+    <!-- 제출버튼 클릭: 자동으로 유효성 검사, 필수 입력사항 검사<br><br>
+    novalidate="novalidate"를 form태그의 속성으로 주면 검사 안함 <br><br><br><br> -->
+
+<!-- <form novalidate="novalidate" action=""> -->
+    <form action="">
+    email : <input type="email" name="email"><br>
+    아이디   : <input type="text" id="uid" name="uid" required><br>
+
+    <input type="submit">
+    <input type="submit" formnovalidate="novalidate"> 이 버튼은 유효성 검사 안함
+</form>
+
+ <hr>
+
+    <form action="ex100_ok.jsp" method="get" 
+          id="form1"
+          target="_blank"
+          enctype="application/x-www-form-urlencoded">
+          <!-- 여기도 타겟 먹네 / 인코딩 기본값이 저거임-->
+
+        아이디   : <input type="text" id="uid" name="uid" value="hong"><br>
+        비밀번호 : <input type="password" id="pwd" name="pwd" value="1234"><br>
+
+
+        <input type="submit"><br>
+        <input type="submit" formmethod="post"><br>
+        <!-- 두번째 서브밋 버튼은 post 방식으로 서브밋됨 (우선순위가 서브밋 쪽이 높음)-->
+        <input type="submit" formmethod="post" formaction="ex01_02.html"><br>
+        <input type="submit" formenctype="multipart/form-data" formtarget="_blank"><br>
+        <!-- 인코딩 방법이나 타겟도 설정됨 -->
+
+
+    </form>
+
+    email : <input type="email" name="email" form="form1">
+    <!-- form 속성으로 id 연동시켜주면 -->
+    <!-- form 바깥에 있는 이놈도 form 안에 있는 서브밋으로 데려갈 수 있다-->
+
+</body>
+</html>

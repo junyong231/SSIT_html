@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- 뷰포트: 기기에 맞춰 화면 배율 등 제어하는 것 -->
+ <style>
+    * {
+       box-sizing: border-box;
+    }
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        /* Arial 없으면 다음꺼.. 다음꺼... */
+    }
+    div#header{
+        background-color: #777;
+        color: white;
+        padding: 30px;
+        text-align: center;
+        font-size: 35px;
+    }
+    div#footer{
+        background-color: #777;
+        color: white;
+        padding: 20px;
+        text-align: center;
+        font-size: 25px;
+    }
+    div#article{
+        width: 70%;
+        background-color: #f1f1f1;
+        padding: 20px;
+        min-height: 500px;
+    }
+    div#nav{
+        width: 30%;
+        background-color: #ccc;
+        color: white;
+        height: 500px;
+        padding: 20px;
+    }
+    div#section{
+        /* border: solid 1px red; */
+        display: flex;
+    }
+    /*  div#section::befoer/after? */
+
+    div#section::after{ 
+        /* div#section이 찍힌 후(after) 반영 */
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+
+
+ </style>
+ <style>
+/* css 미디어쿼리 */
+/* 
+    @media screen and (조건) {
+        구문
+    }
+*/
+/* 반응형 웹!! */
+@media screen and (max-width:800px) {
+    div#nav,div#article{
+        width: 100%;
+        height: auto;
+    }
+}
+ </style>
+</head>
+<body>
+
+    <!--(#header>h2)+(#section>(#nav>ul>li*3>a)+(#article>(h2+p*2>lorem)*3))+(#footer>h2)-->
+
+    <header>
+        <h2>(시멘틱태그)</h2>
+    </header>
+    <section>
+        <nav>
+            <ul>
+                <li><a href="">London</a></li>
+                <li><a href="">Paris</a></li>
+                <li><a href="">SEOUL</a></li>
+            </ul>
+        </nav>
+        <article>
+            <h2>London</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias iure, temporibus amet commodi aliquid quaerat magnam, culpa ratione illum ipsa ducimus labore, et nam quibusdam neque pariatur. Blanditiis, eligendi maxime.</p>
+            <p>Distinctio, itaque. Minima culpa est, nostrum eius fuga impedit vero, maxime officiis facere, autem similique? At quisquam minima aliquid consequuntur. Inventore odit architecto doloremque exercitationem ullam officia fugiat optio blanditiis.</p>
+            <h2>Paris</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus vitae dolores quae, aut voluptate cum adipisci expedita exercitationem iure quaerat, facilis odit? Soluta eos ullam at, aliquid dignissimos quo. Facilis.</p>
+            <p>Minus, necessitatibus? Ratione ducimus, sequi repellat quo, at, cum qui sed sint sapiente quidem veniam vel! Animi assumenda eum praesentium voluptatum? Maiores totam placeat eaque sed exercitationem facere porro nostrum!</p>
+            <h2>SEOUL</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit tenetur enim voluptatum error sint, molestias ut reiciendis nulla consequatur? Neque molestiae sint eum aspernatur consequuntur beatae ex ullam esse officiis.</p>
+            <p>Eligendi aperiam unde similique ratione tempore quam harum molestias excepturi quae? Ipsam, nesciunt, ab magni nisi maxime distinctio quibusdam totam rem tempore optio mollitia asperiores, temporibus officiis ducimus? Ex, veniam?</p>
+        </article>
+    </section>
+    <footer>
+        <h2>Footer</h2>
+    </footer>
+
+<script>
+
+
+</script>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body onload="window_init()">
+<!-- onload: 코드가 메모리에 다 올라왔을 때 -->
+<!-- 
+    html의 양식(form) 
+        ㄴ폼은 사용자 입력 수집하는 데에 사용되는 요소들   
+        ㄴ 서버로 전송 ( 서브밋 )
+
+-->
+
+
+<!-- <form> 
+    action: 필수(ex05_ok.jsp) - 보낼곳.. 백엔드 처리하려고 jsp파일로 보냄
+    method: 입력값 보낼 때 어떻게 보낼지 (기본 get)
+            get방식: 주소창 뒤에 달고 날라감
+            post방식: 네트워크 레벨에서 달고감 
+    
+    <fieldset>
+    
+    <legend> 라벨
+
+    <input> 입력받는 창 , name 속성이 없으면 서버에 전달할 수 없다 (id아니다..)
+
+    <label for="아이디"> 동기화=> '비밀번호' 눌러도 포커스 비밀번호 입력창으로 감 
+
+    tabindex : 탭 눌렀을 때 이동되는 순서
+
+    레이아웃은 알아서 테이블 등으로 잡으면 됨
+    
+    
+    GET에 대한 참고사항:
+
+    이름/값 쌍으로 URL에 양식 데이터를 추가합니다.
+    민감한 데이터를 보낼 때는 절대로 GET을 사용하지 마세요!(제출된 양식 데이터는 URL에서 볼 수 있습니다!)
+    URL의 길이는 제한되어 있습니다(2048자)
+    사용자가 결과를 북마크하려는 양식 제출에 유용합니다.
+    GET은 Google의 쿼리 문자열과 같은 비보안 데이터에 적합합니다.
+
+
+    POST에 대한 참고사항:
+
+    HTTP 요청 본문 내부에 양식 데이터를 추가합니다(제출된 양식 데이터는 URL에 표시되지 않습니다)
+    POST는 크기 제한이 없으므로 대량의 데이터를 전송하는 데 사용할 수 있습니다.
+    POST를 사용한 양식 제출은 북마크할 수 없습니다.
+
+
+    암기) http://localhost/html/ex01.html 로 요청하면 GET 방식
+         <a > 도 GET
+        location.href=경로 / 이것도 GET
+        
+-->
+
+<form action="ex05_ok.jsp" method="get">
+    <fieldset>
+        <legend>로그인</legend>
+        <label for="id">아이디</label>
+        <input type="text" id="id" name="id" autofocus tabindex="1" placeholder="ID를 입력하시오">
+        <br>
+        <label for="pw">비밀번호</label>
+        <input type="password" id="pw" name="pw" tabindex="2" placeholder="8-15자의 비밀번호를 입력하시오">
+        <br>
+        <input type="submit" tabindex="3" value="로그인">
+        <input type="reset" class="reset" tabindex="4" >
+        <!-- <input type="reset" id="reset" tabindex="4" onclick="reFocus()">  reFocus함수 만들어주면됨-->
+        <button type="submit">서브밋버튼</button>
+        <button type="reset" class="reset">리셋버튼</button>
+        <button type="button">일반버튼</button>
+    </fieldset>
+</form>
+
+<form action="">
+    <!-- form에 action값 안주면 입력값 가지고 자기 자신을 다시 요청함 -->
+<!-- 선택할 수 있는 옵션 목록 지정 -->
+<!-- required : 필수 입력 -->
+<input list="browser" required>
+    <datalist id="browser">
+        <option value="IE"></option>
+        <option value="CHROME"></option>
+        <option value="FIREFOX"></option>
+        <option value="OPERA"></option>
+    </datalist>
+    <br>
+    Email : <input type="email" placeholder="sample@gmail.com" required>
+    <br>
+    <p>좋아하는 동물 ?</p>
+    <input type="checkbox" name="animals" value="dog" id="dog"><label for="dog">개</label>
+    <input type="checkbox" name="animals" value="cat" id="cat" checked><label for="cat">고양이</label>
+    <input type="checkbox" name="animals" value="pig" id="pig"><label for="pig">돼지</label>
+    <input type="checkbox" name="animals" value="lizard" id="lizard"><label for="lizard">도마뱀</label>
+    <!-- id, for로 동기화 시켜야 이름눌러도 체크된다..
+        name 동일하게 주니까 넘어갈 때 animals=pig&animals=cat 이렇게 감 
+    -->
+    <p>가장 좋아하는 색깔은 ?</p>
+    <input type="radio" name="color" value="red" id="red" checked><label for="red">빨강</label>
+    <input type="radio" name="color" value="green" id="green"><label for="green">초록</label>
+    <input type="radio" name="color" value="blue" id="blue"><label for="blue">퍼렁</label>
+    <input type="radio" name="color" value="yellow" id="yellow"><label for="yellow">누렁</label>
+    <br>
+
+    <p>부서를 선택하세요</p>
+    <!-- onchange -> 옵션 항목 선택해서 파래진 상황 -->
+        <select name="deptno" id="deptno" size="4" multiple>
+            <option value="10">ACCOUNTING</option>
+            <option value="20">RESEARCH</option>
+            <option value="30">SALES</option>
+            <option value="40">QC</option>
+        </select>
+    <br>
+
+    <p>하고 싶은 말 ?</p>
+    <!-- 한줄 -->
+    <input type="text">
+    
+    <!-- 여러줄 -->
+    <textarea rows="10" cols="30" ></textarea>
+    <!-- 10열 30행  -->
+
+    <input type="submit">
+</form>
+
+
+
+<script>
+
+function window_init () {
+    //document.querySelector("#id").focus(); 여기 안해도 속성으로 autofocus 주면 똑같음
+
+}
+
+$(".reset").on("click", function(){
+
+    document.querySelector("#id").focus();
+
+});
+
+
+
+
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+    <form action="ex100_ok.jsp" method="get" autocomplete="off">
+        <!-- autocomplete : 자동완성과 관련된 속성 -->
+
+        <!-- size 속성은 너비 -->
+
+        id : <input type="text" name="id" value="admin" readonly size="50" ><br>
+        <!-- value로 기본값 넣어놔야 테스트도 편하다 -->
+        <!-- readonly : 글쓰기 창에서 이름부분 같은거.. -->
+        email : <input type="email" name="email" value="admin@naver.com" disabled ><br>
+        <!--포커스 안가짐 + 서브밋 때 전송 X -->
+        이름 : <input type="text" name="name" value="홍길둥" maxlength="2"><br>
+        <!-- 010-ㅁㅁㅁㅁ-ㅁㅁㅁㅁ -->
+        폰 번호 : <input type="text" name="phone" value="010-1111-1111" pattern="[0-9]{3}-\d{4}-\d{4}"><br>
+        국어점수 : <input type="number" name="kor" min="0" max="100" value="60" step="3"><br>
+        시간 : <input type="time"><br>
+        url : <input type="url" value="http://"><br>
+        search : <input type="search">
+        
+
+        <input type="submit">
+    </form>
+
+
+</body>
+</html>
+
+<!-- 
+<input type="button">
+<input type="checkbox">
+<input type="color">
+<input type="date">
+<input type="datetime-local">
+<input type="email">
+<input type="file">
+<input type="hidden">
+<input type="image">
+<input type="month">
+<input type="number">
+<input type="password">
+<input type="radio">
+<input type="range">
+<input type="reset">
+<input type="search">
+<input type="submit">
+<input type="tel">
+<input type="text">
+<input type="time">
+<input type="url">
+<input type="week"><input type="button">
+<input type="checkbox">
+<input type="color">
+<input type="date">
+<input type="datetime-local">
+<input type="email">
+<input type="file">
+<input type="hidden">
+<input type="image">
+<input type="month">
+<input type="number">
+<input type="password">
+<input type="radio">
+<input type="range">
+<input type="reset">
+<input type="search">
+<input type="submit">
+<input type="tel">
+<input type="text">
+<input type="time">
+<input type="url">
+<input type="week"> 
+-->

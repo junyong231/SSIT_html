@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+    <!-- 
+        html 그래픽 - 그림 그리기   <canvas> : 도화지의 개념 ( 그래픽 컨테이너 역할 ) 
+                                            , 모든 브라우저에서 지원하는 태그 , 그리기 작업은 js로 함. (시계 참고)
+                                   <svg> : 
+             
+             미디어 - 
+             
+             API
+    -->
+
+    <canvas id="myCanvas" width="200px" height="100px" style="border: solid 1px black;"></canvas>
+    
+<script>
+// canvas에 그려보자
+
+var c = document.getElementById("myCanvas"); //종이 가져옴
+var ctx = c.getContext("2d"); //도구 준비
+// 선 = 두점
+ctx.moveTo(0,0) //시작점
+ctx.lineTo(200,100) //끝점
+ctx.stroke(); //그리기 명령
+
+//원(호)
+ctx.beginPath();
+// ctx.arc(95, 50, 40, 0 ,  2 * Math.PI );
+ctx.arc(95, 50, 20, 0 ,  Math.PI );
+ctx.stroke();
+
+// 텍스트
+ctx.font= "30px 휴먼매직체"
+ctx.strokeText("Hello, World",10, 50);
+</script>
+
+
+<hr>
+<hr>
+<!-- 
+    [svg] 태그 ?
+    - W3C 권장 사항
+    - xml 형식의 벡터 기반 그래픽
+    - svg 태그 : svg 그래픽을 그리기 위한 컨테이너 역할
+-->
+
+<svg width="100px" height="100">
+
+
+
+</svg>
+
+
+
+
+</body>
+</html>
