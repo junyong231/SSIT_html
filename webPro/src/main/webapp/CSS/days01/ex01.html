@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+/* CSS 적용하는 첫번째 방법: head태그 안에 style 태그로 적용 */
+/* 내부적(internal) 적용방법 */
+/* 
+    css selector
+    1. 태그명
+    2. 아이디명 #
+
+    css 특이성
+    - 동일한 요소를 가리키는 css 규칠이 두 개 이상 있는 경우 특이성 값이 가장 높은 선택자의 스타일이 적용됨
+    - 특이성 == 점수 == 순위 : 최종적으로 어떤 스타일 적용될지 결정하는 점수
+        ㄴ 특이성 점수 계산법: 
+        1) 태그명 1점
+        2) 아이디명 100점
+        3) 클래스명 10점
+
+     *{} 범용선택자 : 0점   
+*/
+
+#first{
+    /* 100점 */
+    color: aqua;
+}
+
+
+p#first{
+    /* 100점 + 1점 */
+    color: rgb(0, 167, 83);
+}
+
+p.last{
+    /* 10점 + 1점 */
+    color: rgb(250, 102, 33);
+}
+
+p{
+    color: red;
+    text-align: center;
+}
+
+p {
+    color:blueviolet
+}
+.last {
+    color: brown;
+}
+
+#xx p#first .last{
+    /* 특이성 점수: 100(xx) + 1(p) + 100(first) + 10(last) 점 */
+
+
+}
+
+</style>
+</head>
+<body>
+<!-- 
+    [AWS]
+    1. 우분투 22.04 LTS
+    2. JDK 11
+    3. TOMCAT9.x
+    4. Oracle 11.g    
+    준석 정리본: https://seekers-.notion.site/Putty-AWS-test-6082a97688cb44df9f1c0db4e4aa9b9d
+    재민 정리본:https://aboard-powder-d1e.notion.site/240919-1066d1eb1ade80d1ae51df34eb7e4e1d
+-->
+
+    <!-- 
+[CSS] 
+- Cascading Style Sheets 약어
+계단식
+떨어뜨리다
+작은 폭포
+단계적으로 행하다.
+- html <= html 화면 구성
+- 문서 스타일 지정하는 언어
+- html 요소가 화면에 어떻게 나올지, 종이에 어떻게 나올지, 
+기타 미디어에 표시되는 방법을 지정하는 언어
+- 여러 웹 페이지의 레이아웃을 한 번에 제어할 수 있다.
+- CSS 구문
+    스타일 적용대상 { == 선택자 == css selector
+      속성명: 속성값;
+      속성명: 속성값;
+      속성명: 속성값;
+      속성명: 속성값;
+      속성명: 속성값;  
+    }
+
+    html 단위 생략 : px
+    css 단위 생략 X ( 예외 0 )
+
+-->
+
+<!-- p*2>lorem5^div*4>lorem4 -->
+<p id="first">Lorem ipsum dolor sit amet.</p>
+<p class="last">Illum voluptatibus sed possimus! Voluptate.</p>
+
+ <!-- 어떤 태그의 style 속성으로 스타일 지정 특이성; 1000점  // 이게 첫번째 적용방법임 [인라인 적용방법]-->
+<div style="color: rgb(36, 36, 207);">Lorem ipsum dolor sit.</div>
+
+<div>Nobis temporibus consequatur nemo!</div>
+<div>Inventore cum magnam id.</div>
+<div class="last">Quod dignissimos dolores laboriosam?</div>
+
+
+<p id="first" class="last">zzzzz</p>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<!-- 
+    [html 플러그인]
+    - 웹 브라우저 표준 기능 지원 X + 확장
+    - 다양한 목적
+        ㄴ 은행 업무: [ Active X  ] 지양
+        ㄴ 바이러스 검사
+        ㄴ Java 애플릿 실행
+        ㄴ 플래시 동영상 실행 : 지원X
+        ㄴ 지도 표시
+        등등...
+
+    - <object> 태그 사용
+        ㄴ 모든 브라우저에서 지원하는 태그
+    - <embed>    
+        ㄴ 모든 브라우저 지원
+        ㄴ 닫기 태그 없음
+        ㄴ html 문서 내에 모든 객체를 정의
+        ㄴ html5 지원 X
+-->
+
+
+<!--  html 문서 내에 포함된 객체를 정의하는 태그 : object
+      웹 페이지에 플러그인(Java 애플릿 , PDF 리더, flash 플레이어..)
+      내장하도록 설계. html 내에 html문서 포함하는데도 사용 가능
+-->
+
+<!-- ex01 다가져옴 -->
+<object width="100%" height="500px" data="ex01.html"></object>
+<!-- 이미지도 처리 가능 -->
+<object data="audi.jpeg" type=""></object>
+<hr>
+<embed src="audi.jpeg">
+<embed width="100%" height="500px" data="ex01.html">
+
+</body>
+</html>

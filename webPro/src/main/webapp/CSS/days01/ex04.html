@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    * {
+        /* 특이성점수 0점 */
+        padding: 20px;
+    }
+
+    /* 그룹 선택자 */
+    h1, h2, h3, h4, h5, h6 {
+        border: 1px solid firebrick;
+    }
+
+    div a {
+        font-size: 40px;
+        color: black;
+    }
+
+    div > a {
+        font-size: 40px;
+        color: red;
+    }
+    
+    div + p {
+        background-color: aquamarine;
+    }
+    div{
+        border: 1px solid black
+    }
+
+    p ~ div {
+        border-width: 10px;
+    }
+
+</style>
+</head>
+<body>
+
+
+<!-- 
+    [CSS 선택자]
+    1. 단순 선택자: 태그명, #아이디명, .클래스명, *범용선택자
+    2. 그룹화 선택자    
+    3. 조합 선택자 : 요소 간의 특정 관계를 기반으로하는 선택자
+        1) 요소a 요소b : 요소a 후손인 요소b에 대해서 적용
+        2) 요소a > 요소b : 요소a의 직계자식인 요소a에 대해서 적용
+        3) 요소a + 요소b : a요소 바로 뒤(바로 옆 형제)에 따라오는 b요소
+        4) 요소a ~ 요소b : a요소 뒤에 오는 모든 b(형제)요소
+-->
+
+
+<a href="">Lorem.</a><br>
+<a href="">Illum.</a><br>
+<a href="">Tempore!</a><br>
+
+<div>
+    <a href="">XXX</a><br>
+    <a href="">XXX</a><br>
+    <p>
+        <a href="">YYY</a>
+    </p>
+    <a href="">XXX</a>
+</div>
+
+<p id="p1" class="second">Lorem.</p>
+<p id="p2" class="second">Esse!</p>
+
+<div>Lorem.</div>
+<div class="second">ZZZ</div>
+<div>Lorem.</div>
+
+
+<h3>Lorem, ipsum dolor.</h3>
+
+
+
+
+</body>
+</html>
