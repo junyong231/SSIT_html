@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    body{
+        background-color: tan;
+    }
+
+    ul{
+        list-style-type: lower-roman;
+        /* 목록 항목의 마커를 지정 가능 */
+        list-style-image: url(../images/sqpurple.gif);
+    }
+
+    /* 마커 위치 지정 */
+    ul.a{
+        list-style-position: inside;
+    }
+    ul.b{
+        list-style-position: outside;
+    }
+
+    ul>li{
+        border: 1px solid black;
+        /* 보더 주니까 inside outside 의미 파악하기 쉬움 */
+    }
+    ul,ol{
+        list-style-type: none;
+        /* 마크 없어짐 */
+    }
+    
+
+</style>
+</head>
+<body>
+<ul class="a">
+    <li>Lorem, ipsum dolor.</li>
+    <li>Tempore, quia iste!</li>
+    <li>Nostrum, non excepturi!</li>
+</ul>
+<ul class="b">
+    <li>Lorem, ipsum dolor.</li>
+    <li>Tempore, quia iste!</li>
+    <li>Nostrum, non excepturi!</li>
+</ul>
+<ol class="c">
+    <li>Lorem, ipsum dolor.</li>
+    <li>Tempore, quia iste!</li>
+    <li>Nostrum, non excepturi!</li>
+</ol>
+</body>
+</html>
