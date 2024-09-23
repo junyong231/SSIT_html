@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    body{
+        background-color: rosybrown;
+    }
+    p{
+        background-color: yellow;
+        padding: 20px;
+        display: none;
+    }
+    /*
+    div:hover p{
+        div가 hover일 때 div 속 p를 보여라 라는 뜻이 됨
+        display: block;
+    }
+    */
+</style>
+</head>
+<body>
+<!-- 
+    : 의사클래스
+        ㄴ 요소의 특정 상태를 정의 (hover,focus...)
+
+    :: 의사요소    
+        ㄴ 요소의 지정된 부분에 스타일을 지정하는데 사용
+        ㄴ첫 글자, 첫 라인 , 요소의 내용 앞/뒤에 삽입..
+
+-->
+<div>
+    Lorem ipsum dolor sit amet, 
+    consectetur adipisicing elit.
+    Deleniti earum.
+    <p>
+      --- Lorem ipsum dolor.
+    </p>
+  </div>
+  <h1>난 제이쿼리</h1>
+  <span style="background-color: aqua; display: none;">ㅋㅋㅋ</span>
+<script>
+// CSS로 했던 것 js로 구현하기
+// 마우스 올릴 때  onmouseover  내릴 떄 onmouseout
+
+const div = document.querySelector("div");
+const p = document.querySelector("div>p");
+
+div.onmouseover = function(){
+    p.style.display = "block";
+}
+
+div.onmouseout = function(){
+    p.style.display = "none";
+}
+
+
+//제이쿼리 .on("mouseover", funtion(){}) 말고
+// $("h1").hover(
+//     function(){
+//         $("span").show();
+//     }, function(){
+//         $("span").hide();
+//     }
+// );
+
+
+//제이쿼리2
+$("h1").hover(function(){
+   $("span").toggle()
+});
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    body{
+        background-color: tan;
+    }
+    .box1 {
+        border: 1px solid gray;
+        width: 100px;
+        height: 100px;
+        text-align: center;
+    }
+</style>
+</head>
+<body>
+
+    <!-- <div class="box1"> BOX-1  </div> -->
+    <!-- 위 코드를 스크립트로 구현해보자 -->
+
+
+<script>
+    //js로 div 요소를 동적으로 생성한 후에 js로 스타일 지정 ??
+    // DOM method
+    const divElement = document.createElement("div"); // js에서 객체 저장 변수 const,, <div> </div> 생성하는 코드
+    divElement.innerText="Box - 1";
+    
+    // 스타일 지정 (1) 
+    divElement.style.border="1px solid gray";
+    divElement.style.width="100px";
+    divElement.style.height="100px";
+    divElement.style.textAlign="center"
+    // text-align 을 낙타표기로 바꿔줘야함
+
+    // 스타일 지정 (2)
+    divElement.className="box1";
+
+    // (2-2)
+    divElement.classList.add("box1")
+
+    // 스타일 지정 (3) - jquery
+    $(divElement).addClass("box1")
+
+
+    //<body>요소에 자식으로 새로 생성한 코드를 추가한다는 것이 필요함..
+    document.body.appendChild(divElement);
+    
+
+
+</script>
+</body>
+</html>

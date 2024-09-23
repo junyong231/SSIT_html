@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body{
+    background-color: tan;
+}
+img{
+    width: 100%;
+    height: auto;
+    opacity: 0.3;
+}
+.container{
+    position: relative;
+}
+.container > div {
+    position: absolute;
+    /* absolute 주니까 인라잉 모드뎀 */
+    font-size: 18px;
+}
+.topleft {
+    top: 20px;
+    left: 20px;
+}
+.topright {
+    top: 20px;
+    right: 20px;
+}
+.bottomleft {
+    bottom: 20px;
+    left: 20px;
+}
+.bottomright {
+    bottom: 20px;
+    right: 20px;
+}
+.center{
+    /* 정가운데 아닌 이유 : C의 시작점이 가운데임 */
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    background-color: red;
+}
+</style>
+</head>
+<body>
+
+<!-- 동영상이나 이미지 위에 텍스트 ? -->
+
+<div class="container">
+    <img src="../images/img_5terre_wide.jpg" alt=""
+    width="1000" height="300" />
+    <div class="topleft">Top Left</div>
+    <div class="topright">Top Right</div>
+    <div class="bottomleft">Bottom Left</div>
+    <div class="bottomright">Bottom Right</div>
+    <div class="center">Center</div>
+ </div>
+<script>
+
+</script>
+</body>
+</html>

@@ -77,19 +77,19 @@ $(".pagination > a").on("click", function(i, val){
 
     // 다른 페이지 번호를 클릭했다고 하면
     // 클릭된 a 태그의 style 수정하는 jQuery 코딩
-    $(".pagination > a").on("click", function () {
-      // alert($(this).text());
-      // a href 속성값을 얻어오고자... jquery
-      // alert($(this).attr("href"));
-      // alert($(this).prop("href"));
+$(".pagination > a").on("click", function () {
+    // alert($(this).text());
+    // a href 속성값을 얻어오고자... jquery
+    // alert($(this).attr("href"));
+    // alert($(this).prop("href"));
 
-      // jquery method active 클래스 속성 추가
-      $(".pagination > a").not(this).removeClass();
-      $(this).addClass("active");
-      // alert("STOP");
-    //   event.preventDefault();
-    //  
-    });
+    // jquery method active 클래스 속성 추가
+    $(".pagination > a").not(this).removeClass();
+    $(this).addClass("active");
+    // alert("STOP");
+//   event.preventDefault();
+//  
+});
 
 // 클릭한 페이지에 active라는 클래스 추가하겠다 
 
