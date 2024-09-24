@@ -68,11 +68,32 @@ span.checked{
 
     //제이쿼리로 >
     
-    $("span.fa.fa-star").each(function(i, elem){
-        if (i<n) {
-            $(elem).addClass("checked");
+    $("body > span.heading").text("상품 평점 ( " + n + " ) 점")
+
+    $("span.fa.fa-star").each(function(i){
+        if (i < n) {
+            $(this).addClass("checked");
         }
-    });
+    
+    })
+
+
+
+
+
+    // $("span.fa.fa-star").each(function(i, elem){ //elem은 생략 가능한 가독성 높이기 위한 코드임.
+    //     if (i<n) {
+    //         $(elem).addClass("checked");
+    //     }
+    // });
+
+
+
+
+
+
+
+
 
 
 

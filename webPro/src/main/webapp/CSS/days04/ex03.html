@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+#navlist{
+    position: relative;
+
+}
+#navlist li{
+    position: absolute;
+    margin: 0;
+    padding: 0;
+}
+#navlist li, #navlist li a{
+    width: 43px;
+    height: 44px;
+    display: block;
+}
+#navlist li#home{
+    left:0px;
+    background: url('../images/img_navsprites_hover.gif') 0 0;
+}
+#navlist li#papago{
+    left: 63px;
+    background: url('../images/img_navsprites_hover.gif') -47px 0;
+}
+#navlist li#mail{
+    left: 129px;
+    background: url('../images/img_navsprites_hover.gif') -92px 0;
+}
+#navlist li#home:hover{
+    background: url('../images/img_navsprites_hover.gif') 0 -45px;
+}
+#navlist li#papago:hover{
+    background: url('../images/img_navsprites_hover.gif') -47px -45px;
+}
+#navlist li#mail:hover{
+    background: url('../images/img_navsprites_hover.gif') -92px -45px;
+}
+</style>
+</head>
+<body>
+<!-- 
+    [ 이미지 스프라이트 ( sprites ) ]
+    - 단일 이미지에 여러 개의 이미지 모음 (포함시키는 것) 스티커 종이에 여러개 붙어있는 것 생각.
+    - 이유 ? 이미지 한 장 당 서버 한번 들리기 vs 통으로 한장 가져와서 잘라서 쓰기 성능 떄문임.
+-->
+
+<img src="../images/img_navsprites_hover.gif" alt="">
+
+<ul id="navlist">
+    <li id="home"></li>
+    <li id="papago"></li>
+    <li id="mail"></li>
+</ul>
+</body>
+</html>

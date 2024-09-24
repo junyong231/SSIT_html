@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    ul{
+        margin-left: 20px;
+        color: blue;
+    }
+    li{
+        cursor: pointer;
+    }
+    span{
+        color: red;
+    }
+</style>
+</head>
+<body>
+
+<!-- jquery hover 메서드 -->
+
+    <ul>
+        <li>Lorem.</li><br>
+        <li>Architecto.</li><br>
+        <li>Ex!</li><br>
+        <li>Omnis.</li><br>
+    </ul>
+
+<script>
+ //$("jquery selectoer") 선택자 css뿐만 아니라 더 있음
+ $("ul li").hover(
+    //mouseover
+    function(){
+        $(this).append("<span>zzz</span>");
+    },
+    //mouseout 
+    function(){
+        // $(this).children().last().remove();
+        //자식 중 마지막을 삭제.
+
+        $(this).find("span").last().remove();
+
+    }
+ );
+
+
+</script>
+</body>
+</html>

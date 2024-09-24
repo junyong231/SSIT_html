@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Insert title here</title>
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="http://localhost/webPro/images/SiSt.ico"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      /* 태그명이 css selector */
+      /* input { */
+
+      /* type 속성을 가지고 있는 input 태그 */
+      /* input[type] { */
+
+      /* [type="submit"] { */
+
+      /* SQL에서 WHERE title = 'flower' 와 같은 것을
+         [title='flower'] { */
+
+      /* SQL에서 WHERE title LIKE 'flower%' 와 같은 것을
+        [title^="flower"] { */
+
+      /* SQL에서 WHERE title LIKE '%flower' 와 같은 것을
+        [title$="flower"] { */
+
+      /* SQL에서 WHERE title LIKE '%flower%' 와 같은 것을
+        [title*="flower"] { */
+
+      /* 단어 flower를 찾겠다 단     공백 O      다시 - X
+        [title~="flower"] { */
+
+      /* 지정된 단어 flower로 시작한다. 중간에 구분자(공백o, 다시o)가 있어도 괜찮다.
+        [title|="flower"] { */
+
+      input {
+        width: 200px;
+        border: 1px solid red;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 
+    css selector (속성을 사용하는 선택자)
+    1. [속성명]
+    2. [속성명=속성값]
+
+    3. [속성명^=속성값]
+    4. [속성명$=속성값]
+    5. [속성명*=속성값]
+    6. [속성명~=속성값]
+    7. [속성명|=속성값]
+   -->
+    <a href="#" title="klematis flower">naver</a><br />
+    <a href="#" title="flower">daum</a><br />
+    <a href="#" title="flower-kbs">daum</a><br />
+    <a href="#" title="kbsflower">sist</a><br />
+    <a href="#" title="kbs-flower">taeyo</a><br />
+    <a href="#" title="flowers">admin</a><br />
+    <hr />
+    <input /><br />
+    <input /><br />
+    <input type="text" /><br />
+    <input type="text" /><br />
+    <input type="text" /><br />
+    <input type="submit" /><br />
+    <input type="reset" /><br />
+  </body>
+</html>

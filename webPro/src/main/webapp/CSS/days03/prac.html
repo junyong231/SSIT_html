@@ -135,32 +135,26 @@
       </div>
     </div>
 
+
 <script>
-// 1 star에 해당하는 20이라는 값을 랜덤하게 발생시키고, 그래프도 그에 맞춘다 ?
-// java였다면 Math.random() , Random rnd...
-// [js] 0.0 < 실수 Math.random < 1.0
 
-// 0 <= 정수  <= 100 을 먼저 발생 시키자
+let n =  Math.floor(Math.random()*101);
 
-let n = Math.floor( Math.random() * 101 ); //floor 절삭
-// console.log(n);
+// const starpoint = document.querySelector("body > div:nth-child(2) > div.side.right > div");
+// starpoint.innerText = n;
 
-// // body > div:nth-child(2) > div.side.right > div  //크롬 개발자도구로 태그 우클릭해서 selector복사해옴
-// const star1ValueDiv = document.querySelector("body > div:nth-child(2) > div.side.right > div");
-// star1ValueDiv.innerText = n;
+// const bar1 = document.querySelector("body > div:nth-child(2) > div.middle > div > div");
+// bar1.style.width = n + "%";
 
-
-// const star1ValueGraph = document.querySelector(".bar-1");
-// star1ValueGraph.style.width= star1ValueDiv.innerText + "%";
-//innerText를 붙여야지 div를 갖다 박으려고해서 안됐었음
-
-
-//위 코드 제이쿼리로
 $("body > div:nth-child(2) > div.side.right > div").text(n);
-$(".bar-1").css("width",n+"%");
+$("body > div:nth-child(2) > div.middle > div > div").css("width",n+"%");
+
 
 
 
 </script>
+
+
+
 </body>
 </html>
