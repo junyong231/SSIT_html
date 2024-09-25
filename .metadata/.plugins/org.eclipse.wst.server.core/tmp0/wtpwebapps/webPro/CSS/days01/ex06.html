@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    body{
+        background-color: rgb(209, 209, 209);
+    }
+    img{
+        opacity: 0.5;
+    }
+    img:hover{
+        opacity: 1.0;
+        cursor: pointer;
+    }
+    div{
+
+        background-color:  rgb(4, 170, 109);
+        padding: 10px;
+    }
+</style>
+</head>
+<body>
+<!--
+    [ css 투명도 ] 
+    opacity : 0.0 (완전 투명) ~ 1.0(완전 불투명) - 자식에게도 상속됨
+
+
+-->
+
+<img src="../images/img_forest.jpg" alt="" width="170" height="100">
+<img src="../images/img_mountains.jpg" alt="" width="170" height="100">
+<img src="../images/img_5terre.jpg" alt="" width="170" height="100">
+<hr>
+<h1>내부적 적용방식으로 주면 자식(p)도 투명도 상속됨</h1>
+<div class="first" style="opacity:0.1">
+    <p>0.1</p>
+</div>
+<div class="second" style="opacity:0.3">
+    <p>0.3</p>
+</div>
+<div class="third" style="opacity:0.6">
+    <p>0.6</p>
+</div>
+<div class="" style="opacity:1.0">
+    <p>1.0 기본값</p>
+</div>
+
+<hr>
+<h1>인라인으로 주면 자식(p태그) 상속 안됨</h1>
+
+<div class="first" style="background-color: rgba(4, 170, 109, 0.1);">
+    <p>0.1</p>
+</div>
+<div class="second" style="background-color: rgba(4, 170, 109, 0.3);">
+    <p>0.3</p>
+</div>
+<div class="third" style="background-color: rgba(4, 170, 109, 0.6);">
+    <p>0.6</p>
+</div>
+<div class="" style="background-color: rgba(4, 170, 109, 1.0);">
+    <p>1.0 기본값</p>
+</div>
+
+
+</body>
+</html>

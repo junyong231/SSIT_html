@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    table{
+        width: 100%;
+        border: 1px solid gray;
+    }
+    th, td{
+        border: 1px solid gray;
+        padding: 8px;
+    }
+    tr:nth-child(even){
+        background-color: #f2f2f2e1;
+    }
+    div{
+        /* border: 1px solid red; */
+        overflow-x: auto;
+        
+    }
+</style>
+</head>
+<body>
+<!-- 
+    [ 반응형 테이블 ]    
+    화면이 너무 작아서 테이블의 전체 내용을 표시할 수 없는 경우
+    가로 스크롤 막대를 표시하는 테이블 
+
+    - 방법
+    1) table을 감싸는 컨테이너 역할을 하는 div 추가
+    2) overflow-x:auto 속성을 설정
+-->
+    <!-- div>table>(tr>th*10>lorem1)+(tr>td*10>lorem1) -->
+     반응형 테이블
+    <div>
+        <table>
+            <tr>
+                <th>Lorem.</th>
+                <th>Quis?</th>
+                <th>Consequatur.</th>
+                <th>Ipsa.</th>
+                <th>Asperiores.</th>
+                <th>Fugiat.</th>
+                <th>Consequatur.</th>
+                <th>Veritatis?</th>
+                <th>Modi!</th>
+                <th>Nobis!</th>
+            </tr>
+            <tr>
+                <td>Lorem.</td>
+                <td>Eveniet.</td>
+                <td>Debitis.</td>
+                <td>Corporis.</td>
+                <td>Iste.</td>
+                <td>Maxime!</td>
+                <td>Tempora!</td>
+                <td>Soluta.</td>
+                <td>Adipisci!</td>
+                <td>Vero.</td>
+            </tr>
+            <tr>
+                <td>Lorem.</td>
+                <td>Laborum.</td>
+                <td>Ut?</td>
+                <td>Ipsum.</td>
+                <td>Pariatur.</td>
+                <td>Quas.</td>
+                <td>Consequatur.</td>
+                <td>Modi!</td>
+                <td>Est.</td>
+                <td>Dolor?</td>
+            </tr>
+            <tr>
+                <td>Lorem.</td>
+                <td>Voluptates!</td>
+                <td>Laudantium!</td>
+                <td>Distinctio.</td>
+                <td>Eaque?</td>
+                <td>Excepturi.</td>
+                <td>Doloremque!</td>
+                <td>Ab?</td>
+                <td>Expedita.</td>
+                <td>Sunt!</td>
+            </tr>
+        </table>
+    </div>
+
+
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{
+        background-color: #1f1f1f;
+        height: 100vh;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .calculator{
+        border: 1px solid #333;
+        background-color: #ccc;
+        padding: 5px;
+        width: 287px;
+    }
+    .calculator > form{
+        display: grid;
+        /* grid-template-columns: 65px 65px 65px 65px 65px; */
+        grid-template-columns:repeat(4,65px);
+        grid-auto-rows: 65px;
+
+        grid-gap: 5px;
+
+    }
+    .calculator>form input {
+        border: 2px solid #333;
+        cursor: pointer;
+        font-size: 19px;
+    }
+    
+    .calculator>form input[name="output"]{
+        /* grid-column:1/5; */
+
+        /* grid-column-start: 1;
+        grid-column-end: 5; */
+        /* 위와 같음 */
+        
+        grid-column: 1/ span 4;
+        /* 다 같음 */
+
+    }
+
+    .calculator>form input:hover{
+        /* 그림자 효과주기 */
+        box-shadow: 1px 1px 2px #333; /* x축 y축 번짐 색깔*/
+    }
+
+
+    .calculator>form .clear{
+        grid-column: 1/4;
+        background-color: rgb(255, 56, 56);
+    }
+    .calculator>form .operator.result{
+        grid-column: 3/5;
+    }
+    .calculator>form .dot{
+        background-color: green;
+    }
+    .calculator>form .operator{
+        background-color: orange;
+    }
+
+</style>
+</head>
+<body>
+<!-- 계산기 기능까지 구현하면 이해에 도움됨 -->
+    <div class="calculator">
+        <form action="" name="forms">
+            <input type="text" name="output" value="0" readonly="readonly" style="text-align: right; padding: 0 10px;">
+            <input type="button" class="clear" value="C">
+            <input type="button" class="operator" value="/">
+            <input type="button" value="1">
+            <input type="button" value="2">
+            <input type="button" value="3">
+            <input type="button" class="operator" value="*">
+            <input type="button" value="4">
+            <input type="button" value="5">
+            <input type="button" value="6">
+            <input type="button" class="operator" value="+">
+            <input type="button" value="7">
+            <input type="button" value="8">
+            <input type="button" value="9">
+            <input type="button" class="operator" value="-">
+            <input type="button" class="dot" value=".">
+            <input type="button" value="0">
+            <input type="button" class="operator result" value="=">
+
+
+        </form>
+    </div>
+</body>
+</html>

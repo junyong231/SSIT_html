@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body{
+    background-color: tan;
+}
+
+ #panel , .flip{
+    background-color: #4acf50;
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    padding: 10px;
+    border: 1px solid #a6d8a8;
+    margin: auto;
+}
+#panel {
+    display: none;
+}
+.flip:hover{
+    cursor: pointer;
+    color: red;
+}
+</style>
+</head>
+<body>
+
+<p class="flip">Lorem, ipsum dolor.</p>
+
+<div id="panel">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla asperiores est quis ipsa! Quibusdam provident temporibus accusantium, libero maiores fugiat omnis reprehenderit facere quod ad illum enim? Quis, molestias natus!</p>
+    <p>In quis ad iure incidunt nulla omnis temporibus sed, a quibusdam molestias molestiae odit saepe distinctio unde ullam, porro magnam at quae, dignissimos animi eligendi vel neque? Tempora, ipsum odio!</p>
+    <p>Accusantium quo blanditiis sed aut magnam neque labore, totam eaque quos incidunt vero non architecto saepe illo aliquid quibusdam nam natus? Ratione ea sunt, iusto quas molestiae culpa! Quas, architecto.</p>
+</div>
+XXX
+<script>
+
+    // const flip = document.querySelector("p.flip");
+    // const panel = document.querySelector("div#panel");
+
+    // // 다시 한 번 눌렀을 때 다시 들어가게 하려면?
+    // let sw= true;
+    // flip.addEventListener("click", function(){
+    //     if (sw) {
+    //         panel.style.display = "block";
+    //     } else {
+    //         panel.style.display = "none";
+    //     }
+    //     sw= !sw
+
+    // });
+
+//제이쿼리로 해보자
+
+/*
+let sw= true;
+
+    $(".flip").on("click",function(){
+        if (sw) {
+            // $("#panel").css("display","block");
+            $("#panel").show();
+        } else {
+            $("#panel").css("display","none");
+        }
+        sw = !sw
+    });
+*/
+
+
+$(".flip").on("click",function(){
+
+    $("#panel").toggle(); //show, hide 반복해주는 제이쿼리 메서드가 아예 있음 ㅋㅋㅋ
+
+});
+
+
+</script>
+</body>
+</html>

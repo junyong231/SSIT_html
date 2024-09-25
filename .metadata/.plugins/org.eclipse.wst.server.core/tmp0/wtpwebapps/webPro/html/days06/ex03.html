@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<!-- 
+    [html 유튜브]    
+    - html 페이지에서 비디오를 재생하는 가장 쉬운 방법
+    - YouTube 동영상을 저장하고 재생할 ID 표시
+    - ID를 사용해서 html 코드에 동영상을 참조해서 사용..
+
+    [html 유튜브 순서]
+    1. YouTube 동영상 업로드
+    2. 동영상 ID 기록 (저장)
+    3. iframe 사용 - src 속성 = 동영상 url 설정
+    4. 너비, 높이도 함께 설정
+       이외에도 여러 설정들을 동영상 URL 추가 설정 가능
+
+-->
+
+
+<iframe src="https://www.youtube.com/embed/tgbNymZ7vqY" width="420" height="315" frameborder="0"></iframe>
+
+<!-- 자동재생 시키는법 -->
+<iframe src="https://www.youtube.com/embed/VILe0l1sXRE?autoplay=1&mute=1" width="420" height="315" frameborder="0"></iframe>
+
+<!-- loop=1 무한반복 , 0 한번반복  // controls 1 컨트롤스있음-->
+<iframe src="https://www.youtube.com/embed/VILe0l1sXRE?autoplay=1&mute=1&controls=0&loop=1" width="420" height="315" frameborder="0"></iframe>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<!-- 
+    [html 멀티미디어]    
+    - 웹 상에서 멀티미디어는 사운드, 음악, 비디오, 영화, 애니메이션을 말한다.
+    - 웹 페이지에서 다양한 유형, 형식의 멀티미디어 요소(태그)가 존재한다.
+    - 최초의 웹 브라우저에서는 단일 색상의 텍스트만 지원(글꼴 제한) => 나중에 글꼴, 색상, 이미지, 멀티미디어 지원하는 브라우저 출시
+    - 멀티미디어 파일: wav, mp3, mp4, mpg, wmv, avi....
+    <참고> html 표준에서는 mp4, webm, ogg 비디오만 지원
+    <참고> html 표준에서는 mp3, wav, ogg 오디오만 지원
+
+    -웹페이지에서 비디오를 표시하는데 사용되는 요소(태그) : <video>
+        ㄴ 항상 너비, 높이 설정(권장) : 위치 배정해줘서 로딩 동안 깜빡이는 것 방지
+        ㄴ 비디오가 로딩되는 동안 깜빡일 수 있다.
+        ㄴ controls 속성을 지정 - 재생, 일시정지, 볼륨 등등의 비디오를 제어하는 속성
+
+
+-->
+
+<video src="movie.mp4" width="320" height="240" controls="controls"></video>
+<hr>
+<h3>src속성을 삭제하고 자식으로 source 태그 추가</h3>
+<!-- source태그 여러개 : 재생 불가하면 다음꺼 다음꺼..다 안되면 문구..
+     autoplay 넣으면 자동 재생 (크롬은 지원 안함.. 음소거 된 후에라면 허용) -->
+<video width="320" height="240" autoplay="autoplay" muted="muted">
+    <source src="movie.mp4" type="video/mp4">
+    <source src="movie.ogg" type="video/ogg">
+    현재 브라우저에서 재생 불가.
+</video>
+<hr>
+<audio controls="controls" autoplay="autoplay" muted="muted">
+    <source src="horse.mp4" type="audio/mpeg">
+    <source src="horse.ogg" type="audio/ogg">
+    현재 브라우저에서 재생 불가.
+</audio>
+
+
+</body>
+</html>

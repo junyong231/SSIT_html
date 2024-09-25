@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    body{
+        background-color: tan;
+    }
+    div{
+        border: 3px solid #4caf50;
+        padding: 5px;
+    }
+    div > img.img1{
+        float: left;
+    }
+    
+    /* 방법1 */
+    /* .clearfix{
+        overflow: auto;
+    } */
+
+    /* 의사 클래스 */
+    .clearfix::after{
+        content: "";
+        clear: both;
+        display: table;
+    }
+</style>
+</head>
+<body>
+<!-- 
+    [ clearfix 해크]
+    부동 요소가 포함하고 있는 컨테이너 요소보다 컨테이너 외부에 overflow가 발생 > 이를 해결    
+-->
+<div class="clearfix">
+    <img class="img1" src="../images/pineapple.jpg" alt=""
+    width=170 height="170"/>
+     Aspernatur eos magni nisi explicabo eaque voluptatem optio nemo aliquid odit illo pariatur voluptate molestias dicta earum omnis quam voluptates quia facilis.
+  </div>
+  
+</body>
+</html>

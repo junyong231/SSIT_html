@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+.imgbox{
+    width: 120px;
+    /* 밑에꺼 안해주면 안됨 원래 자식 이미지크기가 120보다 크니까 오버플로 발생 */
+    border: 1px solid gray;
+    padding: 6px;
+    margin: 4px;
+    text-align: center;
+    float: left;
+}
+
+.imgbox img {
+    width: 100%;
+}
+
+body{
+    background-color: tan;
+}
+</style>
+</head>
+<body>
+
+    
+    <h3>display, visibility 속성 차이점 + js</h3>
+
+    <div id="imgbox1" class="imgbox">BOX1
+        <img src="../images/img_5terre.jpg" alt="">
+        <button onclick="remove()">Remove</button>
+    </div>
+    <div id="imgbox2" class="imgbox">BOX2
+        <img src="../images/img_lights.jpg" alt="">
+        <button>Hide</button>
+    </div>
+    <div id="imgbox3" class="imgbox">BOX3
+        <img src="../images/img_forest.jpg" alt="">
+        <button>ResetAll</button>
+    </div>
+
+<script>
+        //1.remove
+        //2.hide
+        //3.reserall 얘네를
+        //document.querySelector(css선택자) 로 데려오자
+
+        const btnRemove = document.querySelector("#imgbox1 > button");
+        const btnHide = document.querySelector("#imgbox2 > button");
+        const btnResetAll = document.querySelector("#imgbox3 > button");
+        // 버튼 하나 뿐이니 이렇게 ㄱ 여러개 였으면 nth 어쩌구 해서 가져오자
+
+    function remove() {
+        //css style="display: none" 을 js로 ?
+        div1 = btnRemove.parentElement;
+        // btnRemove.parentElement.style.display="none"
+        div1.style.display="none"
+        // 공간확보 안되고 사라져버림
+    } 
+
+    // 이벤트 등록하는 두번째 방법
+    btnHide.onclick = function() {
+        // css style = "visibility:hidden"
+        // alert(this) == 클릭된 버튼
+        //this.parentElement // == 숨겨야 할 div 태그
+        div2 = btnHide.parentElement;
+        this.parentElement.style.visibility="hidden"
+    }
+
+    // 세번째 방법
+    btnResetAll.addEventListener("click", function() {  
+        div1.style.display="block";
+        div2.style.visibility="visible"
+        
+    })
+
+</script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    body{
+        background-color: tan;
+    }
+    .box1 {
+        border: 1px solid gray;
+        width: 100px;
+        height: 100px;
+        text-align: center;
+    }
+    div:nth-child(2){
+        /* <script>도 <body>의 자식임 nth-child(1)은 script임.. */
+        background-color: green;
+    }
+    div:nth-of-type(1){
+        /* 이렇게 하면 확실히 먹지 */
+        background-color: red;
+        position: static;
+        /* 페이지의 일반적인 흐름(인라인,블럭)에 따르는 static */
+    }
+    div:nth-of-type(2){
+        background-color: yellowgreen;
+        position: relative;
+        
+        /* 상대좌표 사용 relative .. 기준 좌표 어디? 이것도 일반적인 흐름에 맞추어짐 */
+        left: 10px;
+        top: 10px;
+
+    }
+    div:nth-of-type(3){
+        background-color: green;
+        position: fixed;
+
+        /* 위치고정 */
+        right: 10px;
+        bottom: 10px;
+        /* 얘 위치 유지 안되고 없어짐 */
+    }
+    div:nth-of-type(4){
+        background-color: blue;
+        position: absolute;
+        
+        /* 절대 좌표: 자신(div)에게 가장 가까운 위치의 조상(body)을 기준으로 하는 좌표 */
+        left: 50px;
+        top: 25px;
+        /* 얘도 위치 유지 안되고 없어짐.. */
+        
+        z-index: -1;
+        /* box-1보다 밑으로 감(z축) */
+        /* 높은 숫자가 위로 감 */
+
+    }
+    div:nth-of-type(5){
+        background-color: brown;
+        position: sticky;
+        margin-bottom: 1000px;
+    }
+
+
+</style>
+</head>
+<body>
+<!-- 지금 여기다가 div 만들면 맨 위에 생김 -->
+    
+
+<script>
+    // js로 반복문 사용해서 div태그 5개 동적 생성 후 position속성 설정(종류별) ?
+   for (var i = 1; i <= 5; i++) {
+    const divElement = document.createElement("div");
+    // divElement.innerText="Box - " + i ;
+    divElement.innerText=`Box - ${i}`;    // ` 물결표(백틱) 
+    divElement.className= "box1";
+    document.body.appendChild(divElement);
+    // 설문조사 생성에서 보기 갯수 동적으로 늘리기..
+   }
+
+   
+
+</script>
+</body>
+</html>

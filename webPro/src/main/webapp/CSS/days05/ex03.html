@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    div{
+        width: 100px;
+        height: 100px;
+        background-color: red;
+
+        position: relative;  /* 이동 top right bottom left 기준*/
+        animation-name: sample;
+        animation-duration: 2s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-delay: 2s;
+        animation-fill-mode: forwards;
+        /* forwards 주면 종료 시 마지막 키 프레임 유지, 백워드 반대 */
+        animation-direction: alternate-reverse;
+        /* 왕복함 */
+
+        /* 약식      규칙명 진행시간 방식 딜레이 반복횟수 왕복여부*/
+        /* animation: sample 4s linear 2s infinite alternate ; */
+    }
+
+    /* 규칙 */
+    @keyframes sample{
+        from{ /* from == 0% */
+            background-color: red;
+        }
+        100%{ /*to == 100%*/
+            background-color: yellow
+        }
+    }
+</style>
+</head>
+<body>
+<!-- 
+    [ CSS 애니메이션 ]    
+    - js/flash 사용 않고도 css로만 애니메이션 처리할 수 있음
+    - 의미: 하나의 스타일에서 점차 다른 스타일로 변환되는 것.
+    - CSS 애니메이션 처리 
+        ㄴ 키프레임..! 특정 시간에 가지는 요소의 스타일
+        키프레임 키프레임 키프레임 키프레임 키프레임 빠르게 재생되서 애니메이션 됨
+
+        -속성들-
+        @keyframes 규칙 내에 CSS 스타일을 지정하면 애니메이션 처리가 됨
+        animation-name
+        animation-duration
+        animation-delay
+        animation-iteration-count
+        animation-direction
+        animation-timing-function
+        animation-fill-mode
+        animation
+-->
+
+<div></div>
+
+
+</body>
+</html>
