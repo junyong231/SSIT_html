@@ -26,6 +26,39 @@
   <xmp class="code">
                          
   </xmp>
+
+  <input type="text" id="txtContent" class="long" placeholder="컨텐츠 입력" autofocus="autofocus">
+  <button class="add">실행(execute)</button>
+
+  <div id="demo" class="code">결과 : </div>
+
+  <script>
+    const btnExec = document.querySelector("button.add");
+    // alert(btnExec);
+    // btnExec.addEventListener("click", function(){})
+    btnExec.onclick=function(){
+
+      let txt = document.querySelector("#txtContent").value;
+      // 인풋 태그에서 입력, 선택한 값은 value로 얻어온다!! (객체 아니라 값이 되었으니 let)
+      // console.log(txt);
+      
+      const demo = document.querySelector("#demo");
+      // alert(demo);
+
+      // demo.innerText = "결과 : " + txt;
+      demo.innerHTML = `결과 : <span style='color:red'><b>${txt}</b></span>`;
+
+      // document.querySelector("#txtContent").value="";
+      // 입력창 지우고
+      // document.querySelector("#txtContent").focus();
+      // 포커스 주기
+
+      // document.querySelector("#txtContent").select();
+      
+
+    }
+  </script>
+
 </div> 
 
 </body>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+<script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+</head>
+<style>
+ span.material-symbols-outlined{
+    vertical-align: text-bottom;
+
+ }  
+</style>
+<body onload="init();">
+<header>
+  <h1 class="main"><a href="#" style="position: absolute;top:30px;">JYP ent</a></h1>
+  <ul>
+    <li><a href="#">로그인</a></li>
+    <li><a href="#">회원가입</a></li>
+  </ul>
+</header>
+<div>
+  <xmp class="code">
+                         
+  </xmp>
+
+  RED : <input type="range" id="c_red" min="1" max="255" step="1" value="0">
+  BLUE : <input type="range" id="c_blue" min="1" max="255" step="1" value="0">
+  GREEN : <input type="range" id="c_green" min="1" max="255" step="1" value="0">
+
+  <p style="height: 150px;">홍길동</p>
+
+</div> 
+
+<script>
+  let red = document.querySelector("#c_red").vlaue;
+  let blue = document.querySelector("#c_blue").vlaue;
+  let green = document.querySelector("#c_green").vlaue;
+  const out = document.getElementById("out")  // 여긴 #안쓴다.
+  document.getElementsByTagName("p")[0]; // int [] m = new int[1];  m[0] 같은 맥락
+  const pElem = document.getElementsByTagName("p")[0];
+  let fontSize = 16;
+
+
+
+//이벤트
+// pi_input.oninput = function() {
+//   fontSize = this.value;
+//   // alert("xx");
+//   // out.innerHTML = `${fontSize}px `;
+//   out.textContent = `${fontSize}px `;
+//   pElem.style.fontSize = `${fontSize}px`;
+// }
+
+// 호출() XX   등록 OO
+c_red.oninput = func_p_bgcolor;
+c_green.oninput = func_p_bgcolor;
+c_blue.oninput = func_p_bgcolor;
+
+
+function func_p_bgcolor() {
+  let redval = c_red.value;
+  let greenval = c_green.value;
+  let blueval = c_blue.value;
+
+  pElem.style.backgroundColor=`RGB(${redval},${greenval},${blueval})`;
+  pElem.innerText= `RGB(${redval},${greenval},${blueval})`;
+  pElem.style.fontSize = "30px";
+}
+
+//body onload 부분
+function init() {
+  pElem.style.backgroundColor= `rgb(255,0,0)`; 
+}
+</script>
+
+</body>
+</html>

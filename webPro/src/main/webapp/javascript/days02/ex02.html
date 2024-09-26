@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+<script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+</head>
+<style>
+ span.material-symbols-outlined{
+    vertical-align: text-bottom;
+ }  
+</style>
+<body>
+<header>
+  <h1 class="main"><a href="#" style="position: absolute;top:30px;">JYP ent</a></h1>
+  <ul>
+    <li><a href="#">로그인</a></li>
+    <li><a href="#">회원가입</a></li>
+  </ul>
+</header>
+<div>
+  <xmp class="code">
+                         
+  </xmp>
+  <button>Turn On</button>
+  <button>Turn Off</button>
+  <br>
+  <img src="../images/pic_bulboff.gif" alt="">
+  <!-- <img src="../images/pic_bulbon.gif" alt="" style="display: none;"> -->
+   
+</div> 
+<script>
+  const btnOn = document.querySelector("button:first-of-type");
+  const btnOff = document.querySelector("button:last-of-type");
+  const imgBulb = document.querySelector("img");
+ //쌤 작전: src 속성 바꿔치기
+
+  btnOff.style.display="none";
+
+  btnOn.addEventListener("click" , function(){ 
+    //이벤트리스너: 복붙쳐서 한 번 클릭에 함수 여러개 호출 가능
+    imgBulb.setAttribute("src", "../images/pic_bulbon.gif");
+    btnOff.style.display="inline";//버튼 요소는 원래 inline요소임
+    btnOn.style.display="none"; 
+  });
+  btnOff.addEventListener("click" , function(){ 
+    //이벤트리스너: 복붙쳐서 한 번 클릭에 함수 여러개 호출 가능
+    imgBulb.setAttribute("src", "../images/pic_bulboff.gif");
+    btnOff.style.display="none";
+    btnOn.style.display="inline"; //버튼 요소는 원래 inline요소임
+  });
+
+
+  
+  /* 내가 한 것
+  btnOn.onclick=function(){
+    btnOff.style.display="block";
+    btnOn.style.display="none";
+    const offbulb = document.querySelector("img:first-of-type");
+    const onbulb = document.querySelector("img:last-of-type");
+    offbulb.style.display = "none";
+    onbulb.style.display = "block";
+    
+  }
+  btnOff.onclick=function(){
+    btnOff.style.display="none";
+    btnOn.style.display="block";
+    const offbulb = document.querySelector("img:first-of-type");
+    const onbulb = document.querySelector("img:last-of-type");
+    offbulb.style.display = "block";
+    onbulb.style.display = "none";
+    
+  }
+  */
+</script>
+</body>
+</html>

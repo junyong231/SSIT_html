@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+<script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+</head>
+<style>
+ span.material-symbols-outlined{
+    vertical-align: text-bottom;
+ }  
+ .box{
+  color: red;
+  font-size: 32px;
+  border: 1px solid gray;
+ }
+</style>
+<body>
+<header>
+  <h1 class="main"><a href="#" style="position: absolute;top:30px;">JYP ent</a></h1>
+  <ul>
+    <li><a href="#">로그인</a></li>
+    <li><a href="#">회원가입</a></li>
+  </ul>
+</header>
+<div>
+  <xmp class="code">
+      1. 글 색상 color
+      2. 글 크기 font-size
+      3. 테두리  border
+      
+      마우스 올릴 때 속성 변경을 해보자 (mouseover 이벤트 처리)
+  </xmp>
+
+ <div id="demo">
+  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum deserunt fuga sint exercitationem, harum possimus ex maxime! Eligendi voluptatibus quos dolores quia cupiditate cum. Officia, ratione a? Deleniti, dolores soluta.
+ </div>
+
+
+
+</div> 
+
+<script>
+//제이쿼리로 코드 ex01 바꾸기
+
+$("#demo").on("mouseover", function(){
+
+  /* 이벤트 체이닝
+  $(this)
+  .css("color", "red")
+  .css("font-size" , "32px")
+  .css("border", "1px solid gray");
+  */
+ 
+  //css(properties) . 이벤트 체이닝보다 나은
+  /*
+  $(this).css({
+    "color":"red",
+    "font-size":"32px",
+    "border":"1px solid gray",
+
+  });
+  */
+
+  // [ js 함수 ]
+ //js로 요소의 속성값을 설정할 때에는 setAttribute(속성명, 속성값);
+ //js로 요소의 속성값을 읽어올 때에는 getAttribute(속성명);
+ //js로 요소의 속성값을 제거할 때에는 removeAttribute(속성명);
+
+ // [ jquery method ]
+ // attr() , prop() -checked 가져올 때 달랐었음.. prop는 불리언으로
+ // addClass() , removeClass(), hasClass() , toggleClass
+ $(this).attr("class", "box");
+//  $(this).prop("class", "box");
+//  checked말고는 같으셈
+});
+
+
+/*
+$("#demo").on("mouseover",function(){
+  $(this).toggleClass("box");
+})
+*/
+
+
+</script>
+</body>
+</html>
