@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+<script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+</head>
+<style>
+ span.material-symbols-outlined{
+    vertical-align: text-bottom;
+ }  
+</style>
+<body>
+<header>
+  <h1 class="main"><a href="#" style="position: absolute;top:30px;">JYP ent</a></h1>
+  <ul>
+    <li><a href="#">로그인</a></li>
+    <li><a href="#">회원가입</a></li>
+  </ul>
+</header>
+<div>
+  <xmp class="code">
+                         
+  </xmp>
+</div> 
+<br>
+<input type="checkbox" name="subject" id="kor" value="kor">
+<label for="kor">국어</label>
+<input type="checkbox" name="subject" id="eng" value="eng">
+<label for="eng">영어</label>
+<input type="checkbox" name="subject" id="mat" value="mat">
+<label for="mat">수학</label>
+<input type="checkbox" name="subject" id="pe" value="pe">
+<label for="pe">체육</label>
+
+<br>
+<button>확인</button>
+<p id="demo"></p>
+
+
+<script>
+
+
+
+//내 풀이
+// $("button").on("click" ,function(){
+//   const ckbList = $(":checkbox[name=subject]");
+//   $("<ul></ul>").appendTo("#demo");
+
+//   for (let i = 0; i < ckbList.length; i++) {
+
+//   if ($(ckbList[i]).prop("checked")) {
+    
+//     $("<li></li>").appendTo("#demo > ul");
+//     $("#demo>li").text($(ckbList[i]).val()) ;
+//     $("#demo > ul").append($("#demo>li"));
+
+//   }
+// }
+// // $("ul").appendTo("#demo");
+// })
+
+//썜 풀이 1
+
+// $("button").on("click", function(){
+//   // 체크된 체크 박스 다 가져옴
+
+//   const ul = $("<ul></ul>");
+//   // $("#demo").append(ul);
+//   $(":checkbox[name=subject]:checked").each(function( index , elem ){
+
+//     // const li = $(`<li>${elem.val()}</li>`);
+//     const li = $("<li></li>");
+//     li.text(elem.value);
+//     ul.append(li);
+
+//   })///each
+
+//   $("#demo").append(ul);
+
+// });//버튼
+
+
+
+
+// 썜 풀이 2
+$("button").on("click", function(){
+  let htmlStr = "<ul>";
+  
+  $(":checkbox[name=subject]:checked").each(function( index , elem ){
+    htmlStr += `<li>${elem.value}</li>`;
+  })///each
+
+  htmlStr += "</ul>";
+  $("#demo").append(htmlStr);
+
+});//버튼
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+<script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+</head>
+<style>
+ span.material-symbols-outlined{
+    vertical-align: text-bottom;
+ }  
+</style>
+<body>
+<header>
+  <h1 class="main"><a href="#" style="position: absolute;top:30px;">JYP ent</a></h1>
+  <ul>
+    <li><a href="#">로그인</a></li>
+    <li><a href="#">회원가입</a></li>
+  </ul>
+</header>
+<div>
+  <xmp class="code">
+          [js 자료형]
+      1. undefined
+      2. number : 정수 , 실수 상관없이 number
+      (java: byte, short, int, long, float, double)
+      (js: double [64비트 부동소수점])
+      3. string
+      4. boolean
+      5. null 
+      6. BigInt (2020)  : 너무 큰 정수값을 저장할 자료형이 필요해서 만듬[64비트 부동소수점]
+          let x = BigInt("12312312431341231423412312315123241231254123");
+      7. object ( {} js객체 [] js배열)
+      8. symbol ... ?
+      변수 선언
+      자료형 변수명 String name;
+      var, let, const 변수명;
+  </xmp>
+</div> 
+<script>
+  let age = 3.14;
+  // alert( typeof age );
+  let gender = true;
+  // alert( typeof gender );
+  /*
+  let x = BigInt("12312312431341231423412312315123241231254123111111111199999");
+  let y = 12312312431341231423412312315123241231254123111111111199999;
+  document.write(x);
+  document.write("<br>");
+  document.write(y);
+  */
+ alert(typeof null); // object,, null도 타입인데 왜이럼..?  => 수정안했다고함 ㅋㅋ
+</script>
+</body>
+</html>
