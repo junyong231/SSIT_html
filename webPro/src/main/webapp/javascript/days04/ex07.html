@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+<script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+</head>
+<style>
+ span.material-symbols-outlined{
+    vertical-align: text-bottom;
+ }  
+ /* input:nth-of-type(1){
+  background-color: red;
+ } */
+</style>
+<body>
+<header>
+  <h1 class="main"><a href="#" style="position: absolute;top:30px;">JYP ent</a></h1>
+  <ul>
+    <li><a href="#">로그인</a></li>
+    <li><a href="#">회원가입</a></li>
+  </ul>
+</header>
+<div>
+  <xmp class="code">
+                         
+  </xmp>
+  <div style="display: flex;justify-content: space-around;align-items: baseline;"></div>
+    <input type="text" autofocus="autofocus">
+    +
+    <input type="text">
+    =
+    <input type="text" disabled="disabled">
+  </div>
+</div> 
+<script>
+  const box1 = document.querySelector("input:nth-of-type(1)");
+  const box2 = document.querySelector("input:nth-of-type(2)");
+  const box3 = document.querySelector("input:nth-of-type(3)");
+
+  box1.onkeydown = function() {
+    if ( !(event.keyCode >= 48 && event.keyCode <= 57
+        || event.keyCode == 8
+        || event.keyCode == 13
+        || event.keyCode == 229 //한글?
+    )) {
+      alert("숫자만 입력하세요")
+      event.returnValue = false; // 이벤트 취소
+    }
+    if ( event.keyCode == 13) {
+      box2.focus();
+    }
+  }
+
+  box2.onkeydown = function() {
+    if ( !(event.keyCode >= 48 && event.keyCode <= 57
+        || event.keyCode == 8
+        || event.keyCode == 13
+        || event.keyCode == 229 //한글?
+    )) {
+      alert("숫자만 입력하세요")
+      event.returnValue = false; // 이벤트 취소
+    }
+    if ( event.keyCode == 13) {
+      let result = parseInt( box1.value ) + parseInt( box2.value );
+      box3.value = result;
+    }
+
+
+  }//func
+
+
+
+
+
+
+  // box1.onkeydown = function () {
+  //       if ( event.keyCode == 13) {
+  //         alert(box1.value);
+  //         let first = box1.value;
+  //         parseInt(box3.value) += box1.value;
+  //       }
+  //     };
+  // box2.onkeydown = function () {
+  //   if ( event.keyCode == 13) {
+  //     alert(box2.value);
+  //     let second = box2.value;
+  //     parseInt(box3.value) += box2.value;
+  //   }
+  // };
+
+</script>
+</body>
+</html>

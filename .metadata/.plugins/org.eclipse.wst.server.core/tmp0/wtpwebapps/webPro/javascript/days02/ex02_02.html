@@ -56,7 +56,7 @@
 
   const imgBulb = document.createElement("img");
   imgBulb.setAttribute("src","../images/pic_bulboff.gif");
-  imgBulb.setAttribute("alt","꺼진 전구")
+  imgBulb.setAttribute("alt","전구 사진")
   document.querySelector("body > div").appendChild(imgBulb);
 
 </script>
@@ -86,9 +86,11 @@
 
 //중복코드니까 함수로 처리하자
 function bulb_onoff(flag){ //매개변수에 자료형을 안붙임 ㄷ
-    imgBulb.setAttribute("src", "../images/pic_bulb" + flag?"on":"off"+ ".gif" );
-    btnOff.style.display=flag?"none":"inline";//버튼 요소는 원래 inline요소임
-    btnOn.style.display=flag?"inline":"none"; 
+    // let srcVal = "../images/pic_bulb" + (flag?"on":"off") + ".gif" ;
+    // alert(flag + "/" + srcVal); //괄호가 없으면 문자열 있음 만 인식해서 true됨
+    imgBulb.setAttribute("src", `../images/pic_bulb${flag?"on":"off"}.gif`);
+    btnOff.style.display=flag?"inline":"none";//버튼 요소는 원래 inline요소임
+    btnOn.style.display=flag?"none":"inline"; 
 };
 
   

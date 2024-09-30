@@ -1,0 +1,21 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<% 
+    //jsp 스트립트 요소 중 '스크립트릿' - 안에는 java 코딩
+    String subject = request.getParameter("subject");
+	
+%>
+> 전송된 과목: <%= subject %><br>
+<input type="radio" name="subject" value="kor"><label for="">국어</label></input>
+<input type="radio" name="subject" value="mat"><label for="">수학</label></input>
+<input type="radio" name="subject" value="eng"><label for="">영어</label></input>
+<input type="radio" name="subject" value="pe"><label for="">체육</label></input>
+</body>
+</html>

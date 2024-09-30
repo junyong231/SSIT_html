@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+<script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+</head>
+<style>
+ span.material-symbols-outlined{
+    vertical-align: text-bottom;
+ }  
+</style>
+<body>
+<header>
+  <h1 class="main"><a href="#" style="position: absolute;top:30px;">JYP ent</a></h1>
+  <ul>
+    <li><a href="#">로그인</a></li>
+    <li><a href="#">회원가입</a></li>
+  </ul>
+</header>
+<div>
+  <xmp class="code">
+    [ js의 함수 ]
+    1. 개념 - 반복적으로 사용되는 코드 블럭을 함수로 처리. (재사용)
+      drawLine()
+    2. js 함수 선언 형식
+      java: [접근제어자] [기타제어자] 리턴자료형 함수명( [매개..]){}
+      js: function 함수명([매개..]){}
+    3. 함수 호출 방법
+      1) 이벤트 발생으로 자동 함수 호출
+      2) js 함수 호출
+      3) 자체 호출 ***
+        (면접 : 함수 클로저 ??)
+  </xmp>
+</div> 
+<button onclick="test();">버튼1</button>
+<button onclick="test(100);">버튼2</button>  <!-- 에러 없음 -->
+<button onclick="test(100,200,300);">버튼3</button> <!-- 에러 없음 -->
+
+<button onclick="sum(100,200);">버튼4</button> <!-- 에러 없음 -->
+
+<p id="demo"></p>
+
+<script>
+  // js Function() 생성자를 통해서 함수 정의 가능 ( 쓸 필요 X )
+  const test2 = new Function("x", "y", "return x + y");
+
+  const test3 = function() { //익명함수 ( 호이스팅 X   ()=>{}처럼 )
+    alert("test3")
+  }
+  
+  test3(); //호출 됨 - 함수 선언부 위로 가면 작동X (호이스팅X_)
+
+  $("#demo").html( myfunc(10,20) );
+
+
+  function test() {
+    // alert("z")
+    //js arguments 컬렉션..
+    alert( arguments.length ); //매개변수의 갯수를 알려주네
+
+  }
+  function sum(a,b,c) {
+    alert("sum")
+  }
+  function myfunc(a,b) { //호이스팅
+    return a + b;
+  }
+</script>
+</body>
+</html>

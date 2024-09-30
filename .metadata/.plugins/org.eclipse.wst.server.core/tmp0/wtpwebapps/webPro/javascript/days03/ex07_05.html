@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+<script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+</head>
+<style>
+ span.material-symbols-outlined{
+    vertical-align: text-bottom;
+ }  
+</style>
+<body>
+<header>
+  <h1 class="main"><a href="#" style="position: absolute;top:30px;">JYP ent</a></h1>
+  <ul>
+    <li><a href="#">로그인</a></li>
+    <li><a href="#">회원가입</a></li>
+  </ul>
+</header>
+<div>
+  <xmp class="code">
+    ES5(2015) let, const 새로 추가
+    재선언X
+    재할당X
+
+  </xmp>
+</div> 
+<script>
+  // const PI = 3.14;
+  
+  // PI = 3.15;
+  //Uncaught TypeError: Assignment(할당) to constant variable. 콘스트에 할당하면 에러
+  
+  // const PI;
+  // PI = 3.14;
+  //Uncaught SyntaxError: Missing initializer in const declaration (at ex07_05.html:39:9)
+  // 선언할 때 초기화 안하면 에러
+
+  //const: js 배열, 객체 사용.
+  
+  //java 배열 선언 ? int [] a = new int[2];
+  //        초기화 ? int [] a = [1,2,3];
+
+  /*
+  // js 배열 ?
+  const m =[]; 
+  m[0] = 1;
+  m[1] = 2;
+  m[2] = 3;
+  // 배열 칸도 가변적임 굳
+  */
+  
+  /*
+  const m = [1,2,3]; // var, let을 줘도 됨
+  m[0]=100;
+  document.write(m[0]); 
+  //배열 m은 상수(const)이나 그 요소는 (1)상수가 아니어서 재할당 ㅇㅋ
+  */
+
+  //js 객체 선언
+  //java에선 class Person() 
+  //        Person p1 = new Person();
+  //            p1.name..
+
+  // const Person = {};
+  //중괄호 == 객체.!
+  // 만들고 멤버 추가..
+  const Person = { name:"홍길동", age:20};//이렇게 클래스 만들기도 가능
+  document.write(Person.name + "<br>");
+
+  Person.age=30;
+  document.write(Person.age + "<br>");
+  document.write(Person["age"] + "<br>"); //위와 같음
+</script>
+</body>
+</html>
