@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+<script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+</head>
+<style>
+ span.material-symbols-outlined{
+    vertical-align: text-bottom;
+ }  
+</style>
+<body>
+<header>
+  <h1 class="main"><a href="#" style="position: absolute;top:30px;">JYP ent</a></h1>
+  <ul>
+    <li><a href="#">로그인</a></li>
+    <li><a href="#">회원가입</a></li>
+  </ul>
+</header>
+<div>
+  <xmp class="code">
+                         
+  </xmp>
+</div> 
+<script>
+  // js 문자열 -> 숫자 형변환 함수
+  // 1. Number()
+  // 2. parseInt() / parseFloat()
+  // 3. eval()
+
+  let n = "10";
+  /*
+  document.write( Number(n) + "<br>"); //숫자 10
+  document.write( parseInt(n) + "<br>"); //숫자 10
+  document.write( parseFloat(n) + "<br>"); //숫자 10
+  */
+
+  /*
+  n= "  10 "; //공백 있어도 trim같은 것 없이 변환됨
+  document.write( Number(n) + "<br>"); //숫자 10
+  document.write( parseInt(n) + "<br>"); //숫자 10
+  document.write( parseFloat(n) + "<br>"); //숫자 10
+  */
+  /*
+  n= "  10 20 30 "; 
+  document.write( Number(n) + "<br>"); //NaN
+  document.write( parseInt(n) + "<br>"); //숫자 10
+  document.write( parseFloat(n) + "<br>"); //숫자 10
+  */
+
+  /*
+  n= "10.33"; 
+  document.write( Number(n) + "<br>"); //숫자 10.33
+  document.write( parseInt(n) + "<br>"); //숫자 10 (정수부분)
+  document.write( parseFloat(n) + "<br>"); //숫자 10.33 
+  */
+
+  /*
+  n= "10,20,30"; 
+  document.write( Number(n) + "<br>"); //NaN
+  document.write( parseInt(n) + "<br>"); //숫자 10
+  document.write( parseFloat(n) + "<br>"); //숫자 10
+  */
+
+  /*
+  n= true;
+  document.write( Number(n) + "<br>"); //1
+  document.write( parseInt(n) + "<br>"); //NaN
+  document.write( parseFloat(n) + "<br>"); //NaN
+  */
+
+
+  // js Number 사용해서 날짜를 숫자로 변환
+  // 1970.1.1 0:0:0/000ms ~~ 부서 세어 온 시간
+  document.write( Number( new Date() ) + "<br>");
+
+</script>
+<script>
+  let x =100;
+  let y = 10.24;
+  // alert(Number.isInteger(x)); //true
+  // alert(Number.isInteger(y)); //false
+
+  /*
+
+  둘의 기능은 같지만 
+  parseInt()는 window. 이 생략된 것임 ( window.alert() 처럼 )
+
+  Number.parseInt()
+  parseInt()
+
+  Number.parseFloat
+  parseFloat()
+  */
+
+  // alert( Number.MAX_VALUE );  //1.7976931348623157e+308 숫자로 찍을 수 있는 가장 큰 값
+  
+
+</script>
+</body>
+</html>

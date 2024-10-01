@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+<script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+</head>
+<style>
+ span.material-symbols-outlined{
+    vertical-align: text-bottom;
+ }  
+</style>
+<body>
+<header>
+  <h1 class="main"><a href="#" style="position: absolute;top:30px;">JYP ent</a></h1>
+  <ul>
+    <li><a href="#">로그인</a></li>
+    <li><a href="#">회원가입</a></li>
+  </ul>
+</header>
+<div>
+  <xmp class="code">
+  [js 문자열 메서드]  
+
+
+  String length 
+  String charAt() : 지정된 위치에 있는 한 문자를 반환
+  String charCodeAt() : UTF16 문자코드값 반환
+  String at() : 지정된 위치에 있는 한 문자를 반환
+  String [ ] : 문자열을 배열처럼 사용 (읽기 전용)
+  String slice()
+  String substring()
+  String substr()
+  </xmp>
+</div> 
+<script>
+  let msg = "ABCDEFGHIJ";
+  
+  //alert( msg.length); // 10
+  // alert(msg.charAt(0)); // A
+  // alert(msg.charCodeAt(0)) // 65  UTF 코드값 반환
+  // alert(msg.at(0)); // A   charAt과의 차이점 
+  // alert( msg[0]) //A   배열처럼 사용 가능 , 읽기 전용
+
+  // String slice(start,end)
+  // String substring(start, end)
+  // String substr(start, length) 
+
+  let rrn = "891223-1700014" // 주민번호예시
+  let year = rrn.slice(0,2);
+  //alert(year); //89
+  let month = rrn.substring(2,4);
+  // alert(month); //12
+  let day //= rrn.substr(4,2)
+          // =rrn.slice(4,6)
+          = rrn.substring(4,6)
+  // alert(day) //23
+
+  let lastRrn = rrn.slice(-1) //주민번호 마지막자리 (4)
+  // alert(lastRrn); //4
+  let rrn7 = rrn.slice(-7); //substring과 달리 slice는 음수 지정 가능 (-7부터 끝까지)
+  // alert(rrn7)
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+<script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+</head>
+<style>
+ span.material-symbols-outlined{
+    vertical-align: text-bottom;
+ }  
+</style>
+<body>
+<header>
+  <h1 class="main"><a href="#" style="position: absolute;top:30px;">JYP ent</a></h1>
+  <ul>
+    <li><a href="#">로그인</a></li>
+    <li><a href="#">회원가입</a></li>
+  </ul>
+</header>
+<div>
+  <xmp class="code">
+                         
+  </xmp>
+  <table id="tblDept">
+    <thead>
+       <tr>
+          <th><input type="checkbox" class="all"> 모두 선택</th>
+          <th>Name</th>
+          <th>Loc</th>
+       </tr>
+    </thead>
+    <tbody>
+       <tr>
+          <td><input type="checkbox" id="ck1"></td>
+          <td>Quam.</td>
+          <td>Sapiente.</td>
+       </tr>
+       <tr>
+        <!-- data-이름="값" -->
+          <td><input type="checkbox" id="ck2" data-name='Consequatur!'></td>
+          <td>Consequatur!</td>
+          <td>Nisi.</td>
+       </tr>
+       <tr>
+          <td><input type="checkbox" id="ck3"></td>
+          <td>Tenetur!</td>
+          <td>Modi.</td>
+       </tr>
+       <tr>
+          <td><input type="checkbox" id="ck4"></td>
+          <td>Earum.</td>
+          <td>Officiis.</td>
+       </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+         <td colspan="3" align="center">
+           <button>선택 확인</button>
+         </td>
+        </tr>
+    </tfoot>
+ </table>
+ 
+ <p id="demo"></p>
+</div> 
+<script>
+  const allCkb = $(":checkbox.all");
+  const ckbs = $(":checkbox:not(.all)");
+  const demo = $("#demo");
+  const btnOk = $("#tblDept >tfoot button");
+
+  // const lOptions = $("#leftCmb option:selected").each(function(i , elem){
+  // $("#rightCmb").append($(elem).clone()); 
+
+  allCkb.on("click", function(){
+      ckbs.attr("checked", allCkb.prop("checked"));
+  })
+
+  ckbs.on("click", function() {
+    let count = ckbs.length;
+    let checkedCount = $(":checkbox:not(.all):checked").length;
+
+    allCkb.prop("checked" , count == checkedCount ? true : false);
+  })
+ 
+  //선택확인
+  $("tfoot button").on("click", function(){
+
+    const ul = $("<ul></ul>");
+
+    $(":checkbox:not(.all):checked").each(function(i,elem){
+      let name = $(elem).parent().next().text();
+      ul.append(`<li>${name}</li>`)
+    })
+    
+    $("#demo").empty().append(ul); //empty()로 그 전에 것들은 지우고 새로운 것 넣음
+  })
+
+
+</script>
+
+<script>
+  // js
+ 
+  // //클릭 이벤트 각각 부여하는법!!
+  // for (let i = 0; i < ckbs.length; i++) {
+  //     ckbs[i].onclick = function() {
+  //       let isCkbsAllChkd = true;
+  //       for (let i = 0; i < ckbs.length; i++) {
+  //         isCkbsAllChkd = ckbs[i].checked;
+  //         if (!isCkbsAllChkd) {
+  //           break; // for2나가기
+  //         }//if
+          
+  //       }//for2
+  //       allCkb.checked = isCkbsAllChkd; //오 따라가게 만들기
+  //     }//func
+  //   } // for
+
+  // //선택된 애들 p(#demo)태그에 표시
+  //   btnOk.onclick = function() {
+  //     let content="<ul>";
+  //     for (let i = 0; i < ckbs.length; i++) {
+  //         const ckb =ckbs[i];
+  //         if (ckbs[i].checked) {
+  //           //td
+  //           let name = ckb.parentElement.nextElementSibling.innerText;
+  //           // demo.appendChild..
+
+  //           content += `<li>${ name }</li>`
+
+  //         }//if
+  //       } // for
+  //       content += "</ul>";
+  //       demo.innerHTML = content;
+  //   }//func
+</script> 
+</body>
+</html>

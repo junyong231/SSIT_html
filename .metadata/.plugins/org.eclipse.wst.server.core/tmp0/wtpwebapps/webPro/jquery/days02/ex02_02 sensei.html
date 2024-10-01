@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+<script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+</head>
+<style>
+ span.material-symbols-outlined{
+    vertical-align: text-bottom;
+ }  
+</style>
+<body>
+<header>
+  <h1 class="main"><a href="#" style="position: absolute;top:30px;">JYP ent</a></h1>
+  <ul>
+    <li><a href="#">로그인</a></li>
+    <li><a href="#">회원가입</a></li>
+  </ul>
+</header>
+<div>
+  <xmp class="code">
+                         
+  </xmp>
+  <!-- <button>Turn On</button>
+  <button>Turn Off</button>
+  <br>
+  <img src="../images/pic_bulboff.gif" alt="">
+ <img src="../images/pic_bulbon.gif" alt="" style="display: none;"> -->
+   
+
+
+</div>
+<script>
+  /* 이렇게 문자열 적어놓고 $("body> div").append(htmlString) 가 실전용
+ let htmlString = 
+ `
+ <button>TurnOn</button>
+ <button>TurnOff</button>
+ <img src="../images/pic_bulboff.gif" alt="전구사진">
+ `;
+*/
+
+
+const btnOn = $("<button>").appendTo("body").html("전구 켜기");
+const btnOff = $("<button>").appendTo("body").html("전구 끄기");
+const imgBulb = $("<img>").appendTo("body").css("display","block")
+.attr("src","../images/pic_bulboff.gif" )
+.prop("alt","전구사진인데요" );
+
+/*
+imgBulb.attr({
+  "src" : "../images/pic_bulboff.gif" ,
+  "alt": "전구사진인데요"
+})
+*/  //이것도 가능
+
+
+</script>
+
+
+
+<script>
+ //쌤 작전: src 속성 바꿔치기
+
+  // btnOff.style.display="none";
+  $(btnOff).hide()
+
+
+
+
+// 이게 더 쉽지만 .on( events [, selector ] [, data ], handler ) 이것도 있다 
+  $(btnOn).on("click",function(){
+    bulb_onoff(true);
+  })
+  $(btnOff).on("click",function(){
+    bulb_onoff(false);
+  })
+
+
+function bulb_onoff(flag){ 
+ // alert(flag); //확인하기
+  $(imgBulb).attr("src", `../images/pic_bulb${flag?"on":"off"}.gif`)
+  // $(btnOff).css("display", flag?"inline":"none");
+  // $(btnOn).css("display", flag?"none":"inline"); //되지만 토글은 최강
+  $(btnOff).toggle();
+  $(btnOn).toggle();
+
+
+};
+
+  
+</script>
+</body>
+</html>
