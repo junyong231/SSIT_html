@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+<script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+</head>
+<style>
+ span.material-symbols-outlined{
+    vertical-align: text-bottom;
+ }  
+</style>
+<body>
+<header>
+  <h1 class="main"><a href="#" style="position: absolute;top:30px;">JYP ent</a></h1>
+  <ul>
+    <li><a href="#">로그인</a></li>
+    <li><a href="#">회원가입</a></li>
+  </ul>
+</header>
+<div>
+  <xmp class="code">
+    [ for-of 문 ]              
+        ㄴ 반복 가능한 객체( array set map string )
+          들을 반복적으로 처리하는 반복문
+        ㄴ 형식: 
+          for( let/const 변수명 of 반복객체(array set...)){
+
+          }
+  </xmp>
+</div> 
+
+<script>
+  /*
+  const arr = [ "a" , "b" , "c"];
+  for( let elem of arr ){
+    console.log(elem)
+  }
+  */
+</script>
+
+<script>
+  /*
+  let msg = "hello, world";
+  for(let c of msg){
+    console.log(c); //공백까지 하나하나 다 처리
+  }
+  */
+</script>
+
+<script>
+  /*
+  let m = new Map([
+    [1, "a"],
+    [2, "b"],
+    [3, "c"]
+  ]);
+  for(let c of m){
+    console.log(c); //[1, 'a'] 배열 형태로 나오기 때문에
+    console.log(c[0]); //키값
+    console.log(c[1]); //밸류값 이 된다.
+  }
+  */
+</script>
+
+<script>
+  let s = new Set([1,1,2,2,2,3,3]);
+  for( let v of s){
+    console.log( v ); //Set이라서 중복제거됨 1,2,3만 찍힘
+  }
+  console.log( s.size );
+</script>
+
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+<script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+</head>
+<style>
+ span.material-symbols-outlined{
+    vertical-align: text-bottom;
+ }  
+</style>
+<body>
+<header>
+  <h1 class="main"><a href="#" style="position: absolute;top:30px;">JYP ent</a></h1>
+  <ul>
+    <li><a href="#">로그인</a></li>
+    <li><a href="#">회원가입</a></li>
+  </ul>
+</header>
+<div>
+  <xmp class="code">
+
+  </xmp>
+</div> 
+
+<script>
+  //문제 : 이번 달의 마지막 날짜를 가져오자
+  // const d= new Date(2024,10,0);
+  // document.write( d.getDate() + "<br>");
+  
+  /*
+  const d = new Date();
+  let year = d.getFullYear();
+  let month = d.getMonth()+1;
+
+  const d2 = new Date(year, month, 0);
+  document.write( d2.getDate() + "<br>");
+  */
+
+  //문제2 )  const rrn = "870412-1700001"; 생일 지난 여부
+
+  const rrn = "870412-1700001";
+  const t = new Date();
+  t.setHours(0);
+  t.setMinutes(0);
+  t.setSeconds(0);
+  t.setMilliseconds(0);
+  let tYear = t.getFullYear();
+  
+
+// js slice() , substring() , substr()
+  let month = rrn.substr(2,2);
+  let date = rrn.substr(4,2);
+  
+  const b = new Date(87,month-1,date);
+  document.write(b.toLocaleString() + "<br>");
+  document.write(t.toLocaleString() + "<br>");
+  document.write( (t-b)  + "<br>");
+
+  if (t-b > 0) {
+    document.write("생일 지났다" + "<br>");
+  } else if ( t-b <0 ) {
+    document.write("생일 안지났다" + "<br>");
+  } else {
+    document.write("오늘 생일" + "<br>");
+  }
+  
+  // let now = new Date();
+  // let nowM = now.getMonth().toString();
+  // let nowd = now.getDate().toString();
+  // let nowMD = nowM + nowd;
+  // alert(nowMD);
+
+  // let birth = rrn.slice(2,6).toString();
+  // alert(birth);
+
+  // // let birD = rrn.slice(4,6).toString();
+  // // alert(birD)
+
+  // // if () {
+    
+  // // }
+
+</script>
+</body>
+</html>
