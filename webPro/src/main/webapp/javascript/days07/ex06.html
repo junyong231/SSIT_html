@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+<script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+</head>
+<style>
+ span.material-symbols-outlined{
+    vertical-align: text-bottom;
+ }  
+</style>
+<body>
+<header>
+  <h1 class="main"><a href="#" style="position: absolute;top:30px;">JYP ent</a></h1>
+  <ul>
+    <li><a href="#">로그인</a></li>
+    <li><a href="#">회원가입</a></li>
+  </ul>
+</header>
+<div>
+  <xmp class="code">
+    [ js 자료형 ]    
+    1) number
+    2) string
+    3) boolean
+    4) bigint
+    5) null
+    6)undefined
+    7) symbol
+    8) object (array , Set, Map..)
+  </xmp>
+
+  <a href="javascript:void(0)">링크1</a>
+  <br>
+  <a href="javascript:void(document.body.style.backgroundColor='red')">링크2</a>
+</div> 
+
+<script>
+  // 형변환
+
+  // 문자열 => 숫자
+  /*
+  Number("100")
+  parseInt()
+  parseFloat()
+  +단항연산자
+  */
+
+  let x = "100";
+  // alert(typeof x) //string
+  let y = +x;
+  // alert(typeof y) //number
+
+  /*
+  숫자 => 문자열
+  1) 100 + "" 
+  2) String(100)
+  3) (100).toString()
+  */
+
+  /* 날짜 => 숫자
+    d = new Date();
+    
+    1) d.getInt();
+    2) Number(d);
+  */
+
+  /* 날짜 => 문자열
+  String(Date());
+  Date().toString();
+  */
+
+  /* Boolean => 숫자
+    Number(true) : 1
+    Number(false) : 0 
+  */
+
+  /* Boolean => 문자열
+  String(true) => "true"
+  true.toString()
+
+  참고)
+  5 + null => 5
+  "5" + null => "5null"
+  "5" + 2 = "52"
+  "5"-2 = 3
+  */
+
+
+</script>
+</body>
+</html>

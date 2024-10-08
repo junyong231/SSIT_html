@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+<script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+</head>
+<style>
+ span.material-symbols-outlined{
+    vertical-align: text-bottom;
+ }  
+</style>
+<body>
+<header>
+  <h1 class="main"><a href="#" style="position: absolute;top:30px;">JYP ent</a></h1>
+  <ul>
+    <li><a href="#">로그인</a></li>
+    <li><a href="#">회원가입</a></li>
+  </ul>
+</header>
+<div>
+  <xmp class="code">
+  [js 문자열 메서드2]     
+  String toUpperCase()
+  String toLowerCase()
+  String concat() : 문자열 붙이기
+
+  String trim()
+  String trimStart()
+  String trimEnd()
+
+  String padStart()
+  String padEnd()
+
+  String repeat() : "-".repeat(5) 하면 -----
+  String replace()
+  String replaceAll()
+          
+  </xmp>
+</div> 
+<script>
+  /*
+  let a = "Hello World";
+  let b = a.toUpperCase();
+  // alert(a); //Hello World  안바뀜 불변
+  // alert(b); //HELLO WORLD  바뀐 버전이 b에 들어감
+  */
+ 
+  // let a = "hello";
+  // let b = "world";
+  // c = "hello world" 로 하려면?
+  // let c = `${a} ${b}`; //가능
+  // let c = a + " " + b; //가능
+  // let c = a.concat(" ").concat(b); //가능
+  // alert(c);
+
+  /*
+    String trim()
+    String trimStart()
+    String trimEnd()
+  */
+ let t = " hello world    ";
+
+// t = t.trim(); //[hello world] 공백이 다 없어짐
+// t = t.trimStart(); //[hello world    ] 앞에 공백만 제거
+// t = t.trimEnd();  //[ hello world] 뒤에 공백만 제거
+// alert(`[${t}]`) 
+
+/*
+  String padStart()
+  String padEnd()
+*/
+
+let no = "51";
+// "0005" "0015" 등으로 네자리 출력 원함
+/*
+let no2 = parseInt(no)
+let no3 = "";
+if (no2 < 10 && no2 >= 0) {
+  no3 = "000"+no
+} else if ( no2 <100) {
+  no3 = "00"+no
+} else if ( no2 < 1000){
+  no3 = "0"+no
+} else {
+
+}
+alert(no3);
+*/
+
+/*
+no = "0".repeat(4-no.length).concat(no);
+alert(no);
+*/
+
+// alert(no.padStart(4, "0")); //0051 start니까 앞에다가 붙임
+
+let msg = "홍길동님 안녕하세요. 홍길동입니다";
+// alert( msg.replace("홍길동" , "OUO") ); //앞에 홍길동만 바뀜
+// alert( msg.replaceAll("홍길동" , "OUO") ); //모든 홍길동 바뀜
+
+// const regex = /Dog/i             
+// replace( regex , "바꿀문자") 도 가능함
+// alert( msg.replace( /홍길동/g  , "ㅋㅋㅋ")) // g는 글로벌 (모든)
+
+
+</script>
+</body>
+</html>

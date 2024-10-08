@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Insert title here</title>
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="http://localhost/webPro/images/SiSt.ico"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="http://localhost/webPro/resources/cdn-main/example.css"
+    />
+    <script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+    <style>
+      span.material-symbols-outlined {
+        vertical-align: text-bottom;
+      }
+      ul {
+        list-style: none;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1 class="main">
+        <a href="#" style="position: absolute; top: 30px">jyoons HOme</a>
+      </h1>
+      <ul>
+        <li><a href="#">로그인</a></li>
+        <li><a href="#">회원가입</a></li>
+      </ul>
+    </header>
+    <div>
+      <xmp class="code">
+       
+      </xmp>
+    </div>
+    <button></button>
+<p id="demo"></p>
+
+ <script>
+function getRndInt(min,max) {
+  return Math.floor( Math.random() * (max-min+1) )
+}
+
+$("button").on("click", function(){
+  const lotto = new Set();
+  let n;
+  while( lotto.size < 6 ){
+    n = getRndInt(1,45);
+    lotto.add(n);
+  }
+})
+//순서유지X 중복제거O
+let content= "<ul>";
+for(let v of lotto) {
+  content += `<li>${v}</li>`;
+}
+content += "</ul>";
+
+$("#demo").html(content);
+
+
+ </script>
+  </body>
+</html>

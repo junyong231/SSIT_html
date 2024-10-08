@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+<script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+</head>
+<style>
+ span.material-symbols-outlined{
+    vertical-align: text-bottom;
+ }  
+</style>
+<body>
+<header>
+  <h1 class="main"><a href="#" style="position: absolute;top:30px;">JYP ent</a></h1>
+  <ul>
+    <li><a href="#">로그인</a></li>
+    <li><a href="#">회원가입</a></li>
+  </ul>
+</header>
+<div>
+  <xmp class="code">
+      jquery > days03 > ex02
+      라디오 버튼을 선택한 후 실행버튼을 누르면 이너 텍스트를 데모에 출력
+  </xmp>
+  <input type="radio" name="group" value="aaa">에이<br>
+  <input type="radio" name="group" value="bbb">비<br>
+  <input type="radio" name="group" value="ccc">씨<br>
+  <input type="radio" name="group" value="ddd">디<br>
+  <input type="radio" name="group" value="eee">이<br>
+  <br>
+  <button>실행</button>
+  <p id="demo"></p>
+  <p id="demo2"></p>
+</div> 
+
+<script>
+
+/*
+$("button").on("click", function(){ //on == 제이쿼리 메서드 , 호출할 때 발생하는 function == 이벤트 핸들러
+
+  const radioList = $("input[type=radio][name=group]");
+  // alert(radioList.length) 5 잘 뜸.
+  for (let i = 0; i < radioList.length; i++) {
+    // console.log(radioList[i].prop("checked")) // 제이쿼리 객체가 아닌데 제이쿼리 함수를 사용해서 에러가 뜬다
+   
+    //에러 내용
+    // Uncaught TypeError: radioList[i].prop is not a function
+    // at HTMLButtonElement.<anonymous>
+    
+    console.log( $(radioList[i]).prop("checked"))
+    //이렇게 $만 붙여도 제이쿼리 객체가 되서 가능해짐 ㅅㅂㅋㅋ
+
+
+    if  ($(radioList[i]).prop("checked") ) {
+      $("#demo").text( radioList[i].nextSibling.nodeValue ) ; // 이렇게 하면 이너텍스트 찍고 (자바스크립트)
+      $("#demo2").text( $(radioList[i]).val() ) ; //이러면 (제이쿼리)
+      break;
+    }
+  }
+  
+})
+*/
+
+
+// 풀이 2
+/*
+$("button").on("click", function(){ 
+
+// :radio !! 제이쿼리 선택자!
+$(":radio[name=group]").each(function (index, elem){
+  
+  if  (elem.checked ) {
+    $("#demo").text( elem.nextSibling.nodeValue ) ; // 이렇게 하면 이너텍스트 찍고 (자바스크립트)
+    $("#demo2").text(elem.value ) ; //이러면 (제이쿼리)
+    
+  }
+
+});
+
+
+})
+*/
+
+//풀이3
+$("button").on("click", function(){ 
+
+    if ( $(":radio[name=group]:checked").length ) { //한개 선택했으니 1나옴 == true
+      $("#demo").text($(":radio[name=group]:checked").val()); 
+      $("#demo2").text($(":radio[name=group]:checked").get(0).nextSibling.nodeValue); 
+      
+      //DOM 요소를 얻어오는 jquery메서드 존재.. get() 
+      // innerText 줄 때 span에라도 담아놨으면 가공도 좋고 선택도 좋고 암튼 그럼
+      
+    } else { //js에선 0도 null도 ""도 false
+      alert("XXX");
+    }
+
+
+});
+
+</script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+127.0.0.1 - - [08/Oct/2024:10:47:48 +0900] "GET / HTTP/1.1" 404 807
+0:0:0:0:0:0:0:1 - - [08/Oct/2024:10:47:48 +0900] "GET /webPro/javascript/days07/ex01.html HTTP/1.1" 200 9111
+0:0:0:0:0:0:0:1 - - [08/Oct/2024:10:47:49 +0900] "GET /webPro/images/SiSt.ico HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [08/Oct/2024:10:47:53 +0900] "GET /webPro/resources/cdn-main/example.css HTTP/1.1" 200 14742
+0:0:0:0:0:0:0:1 - - [08/Oct/2024:10:47:53 +0900] "GET /webPro/resources/cdn-main/example.js HTTP/1.1" 200 4612
+0:0:0:0:0:0:0:1 - - [08/Oct/2024:10:48:38 +0900] "GET /webPro/images/SiSt.ico HTTP/1.1" 200 102255
+0:0:0:0:0:0:0:1 - - [08/Oct/2024:15:44:03 +0900] "GET /webPro/javascript/days07/ex12.html HTTP/1.1" 200 1492
+0:0:0:0:0:0:0:1 - - [08/Oct/2024:15:44:03 +0900] "GET /webPro/javascript/days07/ex12_person.js HTTP/1.1" 200 199
+0:0:0:0:0:0:0:1 - - [08/Oct/2024:15:45:28 +0900] "GET /webPro/javascript/days07/ex12.html HTTP/1.1" 200 1567
+0:0:0:0:0:0:0:1 - - [08/Oct/2024:15:45:29 +0900] "GET /webPro/javascript/days07/ex12_person.js HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [08/Oct/2024:15:45:29 +0900] "GET /webPro/javascript/days07/ex12_message.js HTTP/1.1" 200 200
+0:0:0:0:0:0:0:1 - - [08/Oct/2024:16:15:53 +0900] "GET /webPro/javascript/days07/ex12.html HTTP/1.1" 200 1519
+0:0:0:0:0:0:0:1 - - [08/Oct/2024:16:15:53 +0900] "GET /webPro/javascript/days07/ex12_person.js HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [08/Oct/2024:16:15:55 +0900] "GET /webPro/javascript/days07/ex12.html HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [08/Oct/2024:16:15:55 +0900] "GET /webPro/javascript/days07/ex12_person.js HTTP/1.1" 304 -
