@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+<script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+</head>
+<style>
+ span.material-symbols-outlined{
+    vertical-align: text-bottom;
+ }  
+</style>
+<body>
+<header>
+  <h1 class="main"><a href="#" style="position: absolute;top:30px;">JYP ent</a></h1>
+  <ul>
+    <li><a href="#">로그인</a></li>
+    <li><a href="#">회원가입</a></li>
+  </ul>
+</header>
+<div>
+  <xmp class="code">
+    call() : 다른 객체의 메서드를 불러서 처리할 수 있는 함수
+    apply() : 다른 객체의 메서드를 불러서 처리할 수 있는 함수
+
+    차이점: 매개변수가 있는 경우
+    call은 매개변수 나열
+    apply는 매개변수 [배열]
+    
+  </xmp>
+</div> 
+
+<script>
+
+  let person= {
+    print : function() {
+    return this.name + " / " + this.age;
+    },
+    printf : function( city , eyeColor) {
+    return this.name + " / " + this.age + " / " + this.city + " / " + this.eyeColor;
+    }
+  }
+
+  let person1 = {
+    name : "hong",
+    age : 20
+    /*
+    , print : function() {
+      return this.name + " / " + this.age;
+    } // 이 함수를 모든 객체(person객체들)마다 넣어주기 불편
+    */
+  }
+
+  let person2 = {
+    name : "admin",
+    age : 40
+  }
+
+  // person 객체의 print 함수를 호출해서 출력 ?
+  let p1prt = person.print.call(person1);
+  alert(p1prt)
+
+  person.printf.call(person1 , "seoul" , "blue"); // call - 나열..
+
+  person.printf.apply(person1 , ["seoul" , "blue"])
+
+  // 배열 가장 큰 값, 작은 값
+  const m = [ 3,5,2,4,1 ]
+  let max = Math.max.apply(null,m);
+</script>
+
+<script>
+  //bind() : 다른 객체의 메서드를 내 객체에 묶다
+  let result =  person.print.bind(person1)();
+  // alert(result) //hong / 20
+</script>
+</body>
+</html>

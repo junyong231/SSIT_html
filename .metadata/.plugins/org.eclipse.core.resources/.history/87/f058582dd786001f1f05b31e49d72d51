@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+<script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+</head>
+<style>
+ span.material-symbols-outlined{
+    vertical-align: text-bottom;
+ }  
+</style>
+<body>
+<header>
+  <h1 class="main"><a href="#" style="position: absolute;top:30px;">JYP ent</a></h1>
+  <ul>
+    <li><a href="#">로그인</a></li>
+    <li><a href="#">회원가입</a></li>
+  </ul>
+</header>
+<div>
+  <xmp class="code">
+    [ 콜백함수 ( callback ) ]
+    1. 다른 함수의 매개변수로 전달되는 함수
+    예) setTimeout( dispTime <요놈 , 1000);
+    2. 함수 안에서 다른 함수를 호출 가능..
+    예) function aaa() {
+      bbb();  : 콜백함수 아니어도 호출은 가능
+    }
+    3. 함수의 실행되는 시기를 제어할 수 있다.
+       그래서 콜백함수는 다른 함수가 완료된 후에 실행할 수 있다.
+  </xmp>
+  <p id="demo"></p>
+</div> 
+
+<script>
+  /*
+  function a() {
+    
+  }
+  function b() {
+
+  }
+  // 호출되는 순서에 따라 실행 ..  a->b
+  a();
+  b();
+*/
+</script>
+
+<script>
+// js 함수가 실행되는 시기 제어..!
+function calc( n1, n2) {
+  let result = n1 + n2;
+  return result;
+}
+function disp(result) {
+  $("#demo").html(result);
+}
+
+// calc();
+// disp();
+// disp( result )
+// let result = calc(10,20)
+
+</script>
+
+<script>
+function disp(result) {
+  $("#demo").html(result);
+}
+function calc( n1, n2 , callback) {
+  let result = n1 + n2;
+  // return result;
+  callback(result); 
+  // 이렇게 콜백함수로 하면 순서 신경 쓸 일이 없음
+}
+//계산하고 출력해야함
+
+calc(10, 20 , disp) // 등록임 . 호출아님 : 콜백함수 (매개변수로 전달됨)
+
+</script>
+
+<script>
+  function test() {
+
+  }
+
+  setTimeout( test , 1000); //얘도 콜백..
+</script>
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+<script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+</head>
+<style>
+ span.material-symbols-outlined{
+    vertical-align: text-bottom;
+ }  
+</style>
+<body>
+<header>
+  <h1 class="main"><a href="#" style="position: absolute;top:30px;">JYP ent</a></h1>
+  <ul>
+    <li><a href="#">로그인</a></li>
+    <li><a href="#">회원가입</a></li>
+  </ul>
+</header>
+<div>
+  <xmp class="code">
+
+
+  </xmp>
+
+  <button>0</button>
+  <button>0</button>
+  <button>0</button>
+  <button>0</button>
+  <button>0</button>
+  <button>0</button>
+  <button>0</button>
+  <button>0</button>
+  <button>0</button>
+  <button>0</button>
+  <button>0</button>
+  <button>0</button>
+  <button>0</button>
+  <button>0</button>
+  <button>0</button>
+  <button>0</button>
+  <button>0</button>
+  <button>0</button>
+  <button>0</button>
+  <button>0</button>
+
+
+</div> 
+<script>
+//내 풀이
+// $("button").on("click",function(){
+//   let txt = parseInt( $(this).text() );
+//   // alert( txt )
+//   txt += 1;
+//   $(this).text( txt );
+// });
+
+</script>
+
+<script>
+  //js 쌤풀이
+  /*
+  const btns = document.querySelectorAll("button");
+  for (let i = 0; i < btns.length; i++) {
+    btns[i].onclick = function(){
+      let count = this.innerHTML;
+      this.innerHTML = ++count;
+    }
+  }
+  */
+</script>
+
+<script>
+  //jquery 쌤 풀이
+  /*
+  $("button").on("click", function(){
+    $(this).html( function( i , oldhtml){
+      return ++oldhtml
+    })
+  })
+  */
+</script>
+
+<script>
+  // 20개의 버튼의 클릭수를 저장할 변수를 따로 선언 ?
+  // let btn1Counter = 1;
+  // let btn2Counter = 1;
+  // 이렇게 20 개..
+
+  // 할 바에는 배열을 선언하자
+  //let counts = [ 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 ]
+
+  // 몇천개면 노답
+
+  //클로저를 쓰자 
+</script>
+
+<script>
+  //js 클로저
+  /*
+  const btns = document.querySelectorAll("button");
+  for (let i = 0; i < btns.length; i++) {
+    btns[i].onclick = ( function(){
+      let counter = 0; //지역변수
+
+      return function() { //중첩함수
+        // alert(this) // this도 버튼찍힘 = 됨.. (?)
+        counter++;
+        event.srcElement.innerHTML = counter;
+  
+      }
+    })(); //자체호출함수로
+  }
+  */
+</script>
+
+<script>
+  $("button").on("click", (function(){
+    let counter =0;
+    return function(){
+      // alert(this);
+      $(this).html(++counter); 
+      //$(event.target) 이것도 안됨
+    }
+  })())
+</script>
+</body>
+</html>

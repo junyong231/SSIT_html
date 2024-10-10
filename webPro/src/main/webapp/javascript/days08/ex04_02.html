@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+<script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+</head>
+<style>
+
+</style>
+<body>
+<header>
+  <h1 class="main"><a href="#" style="position: absolute;top:30px;">JYP ent</a></h1>
+  <ul>
+    <li><a href="#">로그인</a></li>
+    <li><a href="#">회원가입</a></li>
+  </ul>
+</header>
+<div>
+  <xmp class="code">
+      setInterval
+      clearInterval
+  </xmp>
+  <h1 id="out"></h1>
+  <button>setInterval</button>
+  <button>clearInterval</button>
+</div> 
+
+<script>
+let timer;
+// 1초마다 날짜/시간 출력... (계속 시간 업데이트 되도록)
+function dispTime() {
+  const now = new Date();
+  $("#out").html( now.toLocaleString());
+
+}
+
+  $("button").first().on("click" , function(){
+
+    // 클릭하자마자 1초 기다려야되서 빡침
+    dispTime(); // 바로 선언해주고 1초기다리면 정상처럼 보임
+
+    timer = setInterval( dispTime , 1000 ) // '밀리세컨드'마다 등록된 콜백함수 호출하는 메서드
+    
+  });
+
+  $("button").last().on("click", function(){
+    clearInterval(timer);
+  })
+
+</script>
+</body>
+</html>
