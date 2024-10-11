@@ -13,7 +13,7 @@ var replyService = (function() {
 		$.ajax({
 			type : 'post',
 			url : '/replies/new',
-			data : JSON.stringify(reply),
+			data : JSON.stringify(reply), // js를 JSON으로
 			contentType : "application/json; charset=utf-8",
 			cache:false, 
 				//beforeSend : function(xhr) {

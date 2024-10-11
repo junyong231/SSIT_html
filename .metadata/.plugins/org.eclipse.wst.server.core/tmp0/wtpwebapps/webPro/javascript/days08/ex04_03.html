@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+<script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+</head>
+<style>
+
+</style>
+<body>
+<header>
+  <h1 class="main"><a href="#" style="position: absolute;top:30px;">JYP ent</a></h1>
+  <ul>
+    <li><a href="#">로그인</a></li>
+    <li><a href="#">회원가입</a></li>
+  </ul>
+</header>
+<div>
+  <xmp class="code">
+      setInterval
+      clearInterval
+      응용예제
+  </xmp>
+  <p id="demo"></p>
+  <button>TypeWriter</button>
+
+</div> 
+
+<script>
+
+let content; // html 테그 모든 내용을 저장하는 변수
+let timer;
+
+$("button").on("click" , function() {
+  // document.body //body태그 요소 , querySelector("body")도 가능은 함
+  // document.documentElement // html태그 요소
+  content = document.documentElement.innerHTML;
+  // alert(content)
+  contentLength = content.length;
+  // alert(contentLength)
+
+  typeWriter();
+  timer = setInterval(typeWriter , 10); //0.01초 간격
+
+})
+
+let i = 0;
+function typeWriter() {
+  //charAt(i)
+  // "abc" [0]  이런 식으로 한 문자씩 읽어와야함
+  let oneChar = content[i++];
+
+  /*
+  let oldHTML = $("#demo").html();
+  $("#demo").html( oldHTML + oneChar)
+  */
+
+  //위와 완전히 같은 코드 (oldHTML 변수로 선언안해도 됨)
+  $("#demo").html(function(index, oldHTML){
+    return oldHTML + ( oneChar == '\n' ? "<br>" : oneChar );
+  })
+  window.scrollTo(0, document.body.scrollHeight);
+  if ( i >= contentLength) {
+    clearInterval(timer);
+    alert("출력완료");
+  }
+}
+
+</script>
+</body>
+</html>

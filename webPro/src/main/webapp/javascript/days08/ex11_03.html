@@ -14,6 +14,38 @@
     vertical-align: text-bottom;
  }  
 </style>
+<style>
+  *{
+      box-sizing: border-box;
+   }
+    .alert{
+      padding: 20px;
+      background-color: #f44336;
+      color:white;
+      opacity: 1; 
+      transition:opacity 0.6s, height 0.6s;
+      margin-bottom: 15px;
+   }
+   
+    .closebtn{
+     margin-left: 15px;
+     color:white;
+     font-weight: bold;
+     float:right;
+     font-size: 22px;
+     line-height: 20px;
+     cursor:pointer;
+     transition:0.3s;
+   }
+   .closebtn:hover{
+      color:black;
+   }
+   
+   .alert.success{     background-color: #4caf50;   }
+   .alert.info{      background-color: #2196f3;   }
+   .alert.warning{     background-color: #ff9800;   }
+   
+</style>
 <body>
 <header>
   <h1 class="main"><a href="#" style="position: absolute;top:30px;">JYP ent</a></h1>
@@ -26,7 +58,172 @@
   <xmp class="code">
                          
   </xmp>
+  <h2>알림(공지사항)</h2>
+   공지사항 타입 : 
+   <select name="type" id="type">
+      <option>type 없음</option>
+      <option>success</option>
+      <option>warning</option>
+      <option>info</option>
+   </select>
+   <br>
+   내용  : <input type="text" />
+   <button>공지사항 추가</button>
+   <br>
+   
+   <hr>
+   
+   <!-- <div class="alert">
+     <span class="closebtn">&times;</span>
+     <strong>Danger!</strong>
+     Lorem ipsum dolor sit amet, consectetur adipisicing.
+   </div>
+   <div class="alert success">
+     <span class="closebtn">&times;</span>
+     <strong>Success!</strong>
+     Lorem ipsum dolor sit amet, consectetur adipisicing.
+   </div>
+   <div class="alert warning">
+     <span class="closebtn">&times;</span>
+     <strong>Warning!</strong>
+     Lorem ipsum dolor sit amet, consectetur adipisicing.
+   </div>
+   <div class="alert info">
+     <span class="closebtn">&times;</span>
+     <strong>Info!</strong>
+     Lorem ipsum dolor sit amet, consectetur adipisicing.
+   </div> -->
 </div> 
 
+<script>
+  // 원래 jsp jdbc DB연동해서 select + AJAX + JSON 처리 해야함..
+  let data = [
+    {type:"success",  message:"Lorem ipsum dolor sit amet, consectetur adipisicing."},
+    {type:"warning", message:"Lorem ipsum dolor sit amet, consectetur adipisicing."},
+    {type:"info", message:"Lorem ipsum dolor sit amet, consectetur adipisicing."},
+    {type:"success", message:"Lorem ipsum dolor sit amet, consectetur adipisicing."}
+    //원래 이 부분이 DB 연동 등등 필요함 지금은 배열로 
+  ];
+
+  for (const notice of data) {
+    // console.log( notice.type + " / " + notice.message  )
+    let newNotice = document.createElement('div')
+    let htmls = `<div class="alert ${notice.type}"> <span class="closebtn">&times;</span>
+     <strong> ${notice.type.toUpperCase()} !</strong>
+     ${notice.message}</div>`;
+    newNotice.innerHTML = htmls;
+
+    document.querySelector("div:first-of-type").appendChild(newNotice)
+    
+  }
+
+</script>
+
+<script>
+
+
+  $("button").on("click", function(){
+    let type = $("option:selected").val();
+    let msg = $("input").val();
+    addNotice(type, msg);
+    
+  })
+
+  function addNotice(type, msg) {
+    if ( type == "type 없음") {
+      alert("타입을 선택하세요")
+      return;
+    }
+    let newNotice = document.createElement('div')
+    let htmls = `<div class="alert ${type}"> <span class="closebtn">&times;</span>
+     <strong> ${type.toUpperCase()} !</strong>
+     ${msg}</div>`;
+    newNotice.innerHTML = htmls;
+
+    let parent = document.querySelector("hr");
+    parent.after(newNotice)
+
+
+    // newNotice > span.closebtn 에다가 클릭이벤트 걸어주는 코드가 필요
+    // 아니면 새로 생긴 div들은 이벤트 안걸려있음..
+    $(".closebtn").on("click" , function() {
+    const parentDiv = $(this).parent();
+
+    parentDiv.css("opacity" , "0");
+    setTimeout(()=>{
+      parentDiv.hide();
+    }, 600)
+    });
+  }
+</script>
+
+<script>
+  // $(".closebtn").on("click", function() {
+  //   $(this).parent().parent().css("display", "none");
+  //   // hide() 도 있음 참고..
+  // })
+
+  $(".closebtn").on("click" , function() {
+    const parentDiv = $(this).parent();
+
+    parentDiv.css("opacity" , "0");
+    //타임아웃 안하면 바로 삭제됨 600으로 0.6초 텀주고 하이드되도록 만들기
+    setTimeout(()=>{
+      parentDiv.hide();
+    }, 600)
+
+  })
+</script>
 </body>
 </html>
+
+<!-- 
+for (let notice of data) {
+    let type = notice.type ;
+    let message =  notice.message;
+     
+    const alertDiv = document.createElement("div");
+    alertDiv.classList.add("alert");
+    alertDiv.classList.add(type);
+
+    const spanBtn = document.createElement("span");
+    spanBtn.classList.add("closebtn");
+    spanBtn.innerHTML = "&times";  // 공지사항 닫기(x)
+    spanBtn.onclick = function (){
+      const parentDiv = this.parentElement;
+      parentDiv.style.opacity = "0";
+      setTimeout(  function (){
+        parentDiv.style.display = "none";
+      }, 600);
+
+    };
+    alertDiv.appendChild( spanBtn );
+
+    const strong = document.createElement("strong");
+    strong.innerHTML = type.toUpperCase() + "!";
+    alertDiv.appendChild( strong );
+
+    let content =  document.createTextNode(message);
+    alertDiv.appendChild( content );
+
+    const hrElemt = document.querySelector("body > div > hr");
+    hrElemt.parentElement.appendChild(alertDiv); 
+}
+ -->
+
+ <!--  after()
+     지정한 요소 뒤에 새로운 요소를 삽입 
+         A.after(B) - A 뒤에 B를 추가
+
+ insertAfter()
+     지정한 요소 뒤에 새로운 요소를 삽입
+         A.insertAfter(B - B 뒤에 A 를 추가
+
+ before()
+     지정한 요소 시작 부분에 내용을 삽입 
+         A.berfore(B) - A 앞에 B를 추가
+
+ insertBefore()
+     지정한 요소 시작 부분에 내용을 삽입
+         A.insertBefore(B) - B 앞에 A 를 추가
+출처: https://webclub.tistory.com/29 [Web Club:티스토리] -->

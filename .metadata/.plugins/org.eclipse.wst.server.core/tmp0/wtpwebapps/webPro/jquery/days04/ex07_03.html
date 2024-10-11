@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+<script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+</head>
+<style>
+ span.material-symbols-outlined{
+    vertical-align: text-bottom;
+ }  
+ /* input:nth-of-type(1){
+  background-color: red;
+ } */
+</style>
+<body>
+<header>
+  <h1 class="main"><a href="#" style="position: absolute;top:30px;">JYP ent</a></h1>
+  <ul>
+    <li><a href="#">로그인</a></li>
+    <li><a href="#">회원가입</a></li>
+  </ul>
+</header>
+<div>
+  <xmp class="code">
+                         
+  </xmp>
+  <div style="display: flex;justify-content: space-around;align-items: baseline;"></div>
+    <input type="text" autofocus="autofocus">
+    <select name="operator" id="operator">
+      <option>선택.</option>
+      <option>+</option>
+      <option>-</option>
+      <option>*</option>
+      <option>/</option>
+      <option>%</option>
+      <option>**</option>
+    </select> 
+    <input type="text">
+    =
+    <input type="text" disabled="disabled">
+  </div>
+</div> 
+<script>
+  const box1 = $(":text").first();
+  const box2 = $(":text").eq(1);
+  const box3 = $(":text").last();
+  const sel = $("#operator");
+
+
+  $("input:nth-of-type(1)").on("keydown" , function(e){
+
+    if ( !(e.which >= 48 && e.which <= 57
+        || e.which == 8
+        || e.which == 13
+        || e.which == 229 //한글?
+    )) {
+      alert("숫자만 입력하세요")
+      return false; // 이벤트 취소
+    }
+    if ( e.which == 13) {
+      box2.focus();
+    }
+  })
+
+ $("input:nth-of-type(2)").on("keydown" , function(e){
+
+    if ( !(e.keyCode >= 48 && e.keyCode <= 57
+        || e.keyCode == 8
+        || e.keyCode == 13
+        || e.keyCode == 229 //한글?
+    )) {
+      alert("숫자만 입력하세요")
+      return false; // 이벤트 취소
+    }
+    if ( e.keyCode == 13) {
+      sel.focus();
+    }
+  })
+
+
+$("#operator").on("change", function(e){
+  let oper = $(this).val();
+  let result = eval( box1.val() + oper + box2.val() );
+  // 문자열로 "2 + 1" 이런식으로 만들고 eval이 연산함
+
+  box3.val(result);
+
+})
+
+
+</script>
+</body>
+</html>
