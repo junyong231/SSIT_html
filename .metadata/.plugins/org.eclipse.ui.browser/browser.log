@@ -1,3 +1,47 @@
 
 9월 25, 2024 15:54:27.840 NEW SESSION
 9월 25, 2024 15:54:27.840 Created TensorFlow Lite XNNPACK delegate for CPU.
+
+10월 14, 2024 09:42:29.869 NEW SESSION
+10월 14, 2024 09:42:29.869 Created TensorFlow Lite XNNPACK delegate for CPU.
+10월 14, 2024 09:42:30.120 [17936:15116:1014/094230.120:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+10월 14, 2024 09:42:30.421 [17936:14016:1014/094230.420:ERROR:CONSOLE(1)] "Unknown VE context: 荑좏궎", source: devtools://devtools/bundled/devtools-frontend/front_end/ui/visual_logging/visual_logging.js (1)
+10월 14, 2024 09:42:50.877 [17936:15116:1014/094250.877:ERROR:connection_factory_impl.cc(434)] Failed to connect to MCS endpoint with error -118
+10월 14, 2024 09:42:57.827 [17936:15116:1014/094257.826:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+10월 14, 2024 09:43:00.33 [17936:14016:1014/094300.033:ERROR:CONSOLE(1)] "Unknown VE context: 荑좏궎", source: devtools://devtools/bundled/devtools-frontend/front_end/ui/visual_logging/visual_logging.js (1)
+10월 14, 2024 09:43:06.508 [17936:14016:1014/094306.508:ERROR:CONSOLE(1)] "Unknown VE context: 荑좏궎", source: devtools://devtools/bundled/devtools-frontend/front_end/ui/visual_logging/visual_logging.js (1)
+10월 14, 2024 09:43:11.945 [17936:14016:1014/094311.945:ERROR:CONSOLE(1)] "Unknown VE context: 荑좏궎", source: devtools://devtools/bundled/devtools-frontend/front_end/ui/visual_logging/visual_logging.js (1)
+10월 14, 2024 09:43:16.445 Created TensorFlow Lite XNNPACK delegate for CPU.
+10월 14, 2024 09:43:16.664 [15712:3540:1014/094316.664:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+10월 14, 2024 09:43:19.846 [15712:8164:1014/094319.846:ERROR:CONSOLE(1)] "Unknown VE context: 荑좏궎", source: devtools://devtools/bundled/devtools-frontend/front_end/ui/visual_logging/visual_logging.js (1)
+10월 14, 2024 09:43:40.242 [15712:3540:1014/094340.242:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+10월 14, 2024 09:44:04.344 [15712:8164:1014/094404.343:ERROR:CONSOLE(1)] "Unknown VE context: 荑좏궎", source: devtools://devtools/bundled/devtools-frontend/front_end/ui/visual_logging/visual_logging.js (1)
+10월 14, 2024 09:44:04.501 [15712:8164:1014/094404.501:ERROR:CONSOLE(1)] "Unknown VE context: 荑좏궎", source: devtools://devtools/bundled/devtools-frontend/front_end/ui/visual_logging/visual_logging.js (1)
+10월 14, 2024 09:44:05.344 [15712:8164:1014/094405.344:ERROR:CONSOLE(1)] "Unknown VE context: 荑좏궎", source: devtools://devtools/bundled/devtools-frontend/front_end/ui/visual_logging/visual_logging.js (1)
+10월 14, 2024 09:44:24.629 [15712:3540:1014/094424.613:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+10월 14, 2024 09:44:43.386 [15712:8164:1014/094443.386:ERROR:CONSOLE(1)] "Unknown VE context: 荑좏궎", source: devtools://devtools/bundled/devtools-frontend/front_end/ui/visual_logging/visual_logging.js (1)
+10월 14, 2024 09:44:49.211 Created TensorFlow Lite XNNPACK delegate for CPU.
+10월 14, 2024 09:44:49.462 [12512:18264:1014/094449.461:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+10월 14, 2024 09:44:52.781 [12512:12560:1014/094452.780:ERROR:CONSOLE(1)] "Unknown VE context: 荑좏궎", source: devtools://devtools/bundled/devtools-frontend/front_end/ui/visual_logging/visual_logging.js (1)
+10월 14, 2024 09:45:10.395 [12512:18264:1014/094510.395:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+10월 14, 2024 09:45:54.55 [12512:12560:1014/094554.054:ERROR:CONSOLE(1)] "Unknown VE context: 荑좏궎", source: devtools://devtools/bundled/devtools-frontend/front_end/ui/visual_logging/visual_logging.js (1)
+10월 14, 2024 09:46:00.610 [12512:18264:1014/094600.610:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+10월 14, 2024 09:47:30.79 [12512:18264:1014/094730.079:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+10월 14, 2024 09:47:57.806 [12512:12560:1014/094757.806:ERROR:CONSOLE(1)] "Unknown VE context: 荑좏궎", source: devtools://devtools/bundled/devtools-frontend/front_end/ui/visual_logging/visual_logging.js (1)
+10월 14, 2024 11:23:35.493 Created TensorFlow Lite XNNPACK delegate for CPU.
+10월 14, 2024 11:23:35.668 [18192:18232:1014/112335.668:ERROR:CONSOLE(1)] "Unknown VE context: 荑좏궎", source: devtools://devtools/bundled/devtools-frontend/front_end/ui/visual_logging/visual_logging.js (1)
+10월 14, 2024 11:23:35.697 [18192:16520:1014/112335.697:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+10월 14, 2024 11:23:36.103 [18192:18232:1014/112336.103:ERROR:CONSOLE(1)] "Unknown VE context: 荑좏궎", source: devtools://devtools/bundled/devtools-frontend/front_end/ui/visual_logging/visual_logging.js (1)
+10월 14, 2024 11:23:37.188 [18192:18232:1014/112337.187:ERROR:CONSOLE(1)] "Unknown VE context: 荑좏궎", source: devtools://devtools/bundled/devtools-frontend/front_end/ui/visual_logging/visual_logging.js (1)
+10월 14, 2024 11:23:38.111 [18192:18232:1014/112338.110:ERROR:CONSOLE(1)] "Unknown VE context: 荑좏궎", source: devtools://devtools/bundled/devtools-frontend/front_end/ui/visual_logging/visual_logging.js (1)
+10월 14, 2024 11:23:39.721 [18192:18232:1014/112339.720:ERROR:CONSOLE(1)] "Unknown VE context: 荑좏궎", source: devtools://devtools/bundled/devtools-frontend/front_end/ui/visual_logging/visual_logging.js (1)
+10월 14, 2024 11:24:03.832 [18192:16520:1014/112403.831:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+10월 14, 2024 11:24:05.369 [18192:18232:1014/112405.369:ERROR:CONSOLE(1)] "Unknown VE context: 荑좏궎", source: devtools://devtools/bundled/devtools-frontend/front_end/ui/visual_logging/visual_logging.js (1)
+10월 14, 2024 11:24:05.806 [18192:18232:1014/112405.806:ERROR:CONSOLE(1)] "Unknown VE context: 荑좏궎", source: devtools://devtools/bundled/devtools-frontend/front_end/ui/visual_logging/visual_logging.js (1)
+10월 14, 2024 11:24:38.82 [18192:18232:1014/112438.082:ERROR:CONSOLE(1)] "Unknown VE context: 荑좏궎", source: devtools://devtools/bundled/devtools-frontend/front_end/ui/visual_logging/visual_logging.js (1)
+10월 14, 2024 11:24:55.937 [18192:18232:1014/112455.937:ERROR:CONSOLE(1)] "Unknown VE context: 荑좏궎", source: devtools://devtools/bundled/devtools-frontend/front_end/ui/visual_logging/visual_logging.js (1)
+10월 14, 2024 11:24:57.986 [18192:18232:1014/112457.986:ERROR:CONSOLE(1)] "Unknown VE context: 荑좏궎", source: devtools://devtools/bundled/devtools-frontend/front_end/ui/visual_logging/visual_logging.js (1)
+10월 14, 2024 11:24:59.63 [18192:18232:1014/112459.062:ERROR:CONSOLE(1)] "Unknown VE context: 荑좏궎", source: devtools://devtools/bundled/devtools-frontend/front_end/ui/visual_logging/visual_logging.js (1)
+10월 14, 2024 11:25:01.780 [18192:18232:1014/112501.780:ERROR:CONSOLE(1)] "Unknown VE context: 荑좏궎", source: devtools://devtools/bundled/devtools-frontend/front_end/ui/visual_logging/visual_logging.js (1)
+10월 14, 2024 11:25:02.301 [18192:16520:1014/112502.301:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+10월 14, 2024 11:25:02.809 [18192:18232:1014/112502.809:ERROR:CONSOLE(1)] "Unknown VE context: 荑좏궎", source: devtools://devtools/bundled/devtools-frontend/front_end/ui/visual_logging/visual_logging.js (1)

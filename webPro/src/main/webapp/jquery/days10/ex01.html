@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> -->
+ <!-- CDN 방식 -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+<script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+<script src="jquery-3.7.1.js"></script>
+</head>
+<style>
+ span.material-symbols-outlined{
+    vertical-align: text-bottom;
+ }  
+</style>
+<body>
+<header>
+  <h1 class="main"><a href="#" style="position: absolute;top:30px;">JYP ent</a></h1>
+  <ul>
+    <li><a href="#">로그인</a></li>
+    <li><a href="#">회원가입</a></li>
+  </ul>
+</header>
+<div>
+  <xmp class="code">
+    jQuery는 빠르고 작으며 기능이 풍부한 JavaScript 라이브러리입니다. 
+    다양한 브라우저에서 작동하는 사용하기 쉬운 API로 HTML 문서 탐색 및 조작
+    , 이벤트 처리, 애니메이션, Ajax와 같은 작업을 훨씬 더 간단하게 만들어줍니다.
+    다재다능함과 확장성이 결합된 jQuery는 수백만 명의 사람들이
+    JavaScript를 작성하는 방식을 바꾸어 놓았습니다.    
+    
+    2. CDN 은 전세계에 
+    분산된 서버에서 제이쿼리를 호스팅하여 성능상 이점 제공
+
+    3. 제이쿼리 사용하는 구문 *형식
+    $(제이쿼리 선택자).action()
+    1. 제이쿼리 선택자
+    2. 액션 (메서드)만 알면 끝
+
+    4. 웹 페이지에서 제이쿼리 외에 다른 프레임워크를 사용할 때
+      제이쿼리에서 사용하는 $ 기호를 다른 프레임워크에서 다른 의미의 변수로
+      벌써 사용이 되고 있다면 $ 기호의 충돌이 발생할 것이다.
+      다른 프레임워크( Angular, knockout, ember, backbone 등등)
+
+        jq 변수의 다른 기호로 $ 축약해서 사용한다
+
+      let jQuery = {};
+      let $ = jQuery;
+
+      jq에서 사용하는 $변수를 해제.. moConflict()
+                                    
+  </xmp>
+<button>확인</button>
+<p id="demo"></p>
+</div> 
+<script>
+
+  // $.noConflict(); // $ 약식기호 해제, 밑 코딩 작동X
+
+  //이제 $ 대신 jQuery 써야됨 (원래 이름)
+  /*
+  jQuery("button").on("click", function(){
+    jQuery("#demo").html("박준용")
+  })
+  */
+
+  
+  //jQuery도 충돌?
+
+  var jq = $.noConflict();
+
+
+  jq("button").on("click", function(){
+    jq("#demo").html("asd")
+  })
+</script>
+</body>
+</html>

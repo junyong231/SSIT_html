@@ -24,9 +24,49 @@
 </header>
 <div>
   <xmp class="code">
-                         
+    
   </xmp>
+  <img src="../images/item01.gif" alt="">
 </div> 
+<script>
+  // item01 ~ item21 이미지 랜덤하게 클릭하는 곳에 추가
+  function getRandom( min , max ) {
+    return Math.floor( Math.random()*(max-min+1)+min);
+  }
 
+  document.oncontextmenu = function() {
+    // alert("오른쪽 마우스를 사용할 수 없습니다.")
+    return false;
+    //이벤트 끝나서 오른쪽 마우스 안됨
+  }
+
+  document.onmousedown = function() {
+    // console.log( event.button );
+    // 왼 - 휠 - 오 버튼(마우스) 순으로 0 1 2 찍힘
+
+    if (event.button == 0) {
+      document.title = event.clientX + ", " + event.clientY+ " / " + $("img").width();
+
+      let img = document.createElement("img");
+      var imgNo = getRandom(1,21).toString().padStart(2,0);
+      var src = `../images/item${imgNo}.gif`;
+      img.setAttribute("src", src);
+
+      let left = event.clientX - $("img").width()/2;
+      let top = event.clientY- $("img").height()/2;
+      img.setAttribute("style" , `position:absolute;left:${left}px;top:${top}px`);
+
+      document.body.appendChild(img);
+    } else if (event.button == 1) {
+      $(event.target).hide();
+      // document.body.removeChild( event.srcElement );
+    } else if ( event.button == 2){
+      const imgs = document.querySelectorAll("img");
+      imgs.forEach(element => {
+        element.remove();
+      });
+    }
+  }
+</script>
 </body>
 </html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+<script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+</head>
+<style>
+ span.material-symbols-outlined{
+    vertical-align: text-bottom;
+ }  
+</style>
+<style>
+  #panel,   #flip{
+      padding: 5px;
+      font-size: 18x;
+      text-align: center;
+      color:white;
+      background-color: #555;
+      border:1px solid #666;
+      border-radius:3px
+  }
+  #panel{
+     padding: 50px;
+     display: none;  
+  }
+</style>
+<body>
+<header>
+  <h1 class="main"><a href="#" style="position: absolute;top:30px;">JYP ent</a></h1>
+  <ul>
+    <li><a href="#">로그인</a></li>
+    <li><a href="#">회원가입</a></li>
+  </ul>
+</header>
+<div>
+  <xmp class="code">
+    애니메이션 처리 효과 중지 메서드 : stop()
+    현재 진행중인 애니메이션을 중지하는 메서드
+
+    stop( stopAll, goToEnd );
+            t/f       t/f
+      기본값 F         F
+      stop(false,false) == stop();
+
+    대기열  [오른쪽 100px 아랫쪽 100px 위쪽 100px 왼쪽으로 100px 이동하라고 했다면]
+    stopAll 매개변수
+      false 진행중인 애니메이션 중지, 이후 대기열 수행
+      true  진행중인 것부터 대기열 끝까지 모두 중지
+    
+    goToEnd
+      false 애니메이션 수행 중 정지 -> 애니메이션 끝 상태로 만들건지 도중인 상태로 둘건지
+      true 
+    
+  </xmp>
+  <button id="stop">Stop Sliding</button>
+  <div id="flip">click to Slide Down panel</div>
+  <div id="panel">Hello World</div>
+</div> 
+<script>
+
+//stop(stopAll, goToEnd)
+$("#flip").on("click",function() {
+  $("#panel").slideDown(7000);
+})
+$("#stop").on("click",function() {
+  // $("#panel").stop(false, false);
+  $("#panel").stop(false, true) //goToEnd 트루
+})
+
+</script>
+</body>
+</html>

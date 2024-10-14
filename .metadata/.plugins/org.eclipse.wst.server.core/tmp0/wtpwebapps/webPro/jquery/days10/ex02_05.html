@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+<script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+</head>
+<style>
+ span.material-symbols-outlined{
+    vertical-align: text-bottom;
+ }  
+</style>
+<body>
+<header>
+  <h1 class="main"><a href="#" style="position: absolute;top:30px;">JYP ent</a></h1>
+  <ul>
+    <li><a href="#">로그인</a></li>
+    <li><a href="#">회원가입</a></li>
+  </ul>
+</header>
+<div>
+  <xmp class="code">
+                         
+  </xmp>
+  <p>Lorem ipsum dolor sit amet.</p>
+  <p class="intro">Omnis quod dignissimos voluptates vitae.</p>
+  <p>Quod totam quidem id! Reprehenderit.</p>
+  <p>Non debitis consequuntur velit culpa.</p>
+  <p>At illum nesciunt quaerat sapiente.</p>
+</div> 
+<script>
+  // p태그이면서 class가 intro인 애 배경색 바꾸기 ?
+   $("p.intro").css("background-color" , "red")
+
+   //p태그인데 intro 아닌 놈들 배경색 바꾸기 ?
+   $("p:not(.intro)").css("background-color" , "green")
+   $("p").not(".intro").css("color" , "yellow") //위와 같음
+</script>
+</body>
+</html>

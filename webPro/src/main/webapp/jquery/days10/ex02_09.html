@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+<script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+</head>
+<style>
+ span.material-symbols-outlined{
+    vertical-align: text-bottom;
+ }  
+</style>
+<body>
+<header>
+  <h1 class="main"><a href="#" style="position: absolute;top:30px;">JYP ent</a></h1>
+  <ul>
+    <li><a href="#">로그인</a></li>
+    <li><a href="#">회원가입</a></li>
+  </ul>
+</header>
+<div>
+  <xmp class="code">
+                         
+  </xmp>
+  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident maiores corporis ducimus optio labore dolorem aliquid ratione ex at iure quis, voluptatem doloremque doloribus sunt, pariatur aut dolorum culpa suscipit!</p>
+  <p>Quidem fugiat omnis maiores corporis esse doloremque totam, aspernatur ullam in iure optio porro. Explicabo illo possimus labore molestiae ab nesciunt itaque suscipit, facere, omnis voluptatem totam nisi officia velit.</p>
+  <p>Inventore ratione aut corporis non aspernatur, voluptatum reiciendis suscipit dolore illum, dolor deleniti id unde ipsa earum magni ex accusantium libero doloribus nulla accusamus iste ipsam? Omnis tempora qui veritatis!</p>
+  <p>Delectus hic recusandae labore sequi nihil dolor libero omnis provident eos eligendi magni commodi mollitia, quod dolore beatae ipsum. Inventore similique atque necessitatibus? Veritatis est incidunt consequuntur natus facilis aspernatur?</p>
+  <p>Quam, quod. Enim voluptatum repellat eos, atque voluptates minima magnam ratione ad eveniet tenetur dolores, totam, explicabo laborum provident dignissimos exercitationem? Similique perferendis possimus ea quo quod vitae unde corporis.</p>
+  <p>Ex repellendus quis distinctio molestias facere, labore adipisci dolore ullam, sequi minus deserunt nulla nobis ipsam quos amet illum soluta quod pariatur, corrupti cupiditate deleniti ea veritatis quaerat earum? Deleniti.</p>
+  <p>Hic corrupti a <span>dolore</span> corporis consectetur quisquam mollitia accusantium at ducimus fuga, veniam maxime cumque maiores neque architecto commodi, cum nobis amet quis inventore laudantium vitae ab eligendi laboriosam? Nobis.</p>
+  <p>Alias dolore qui magni, perspiciatis laborum deleniti eligendi voluptas corrupti doloremque quibusdam vel nisi pariatur nulla voluptatibus. Commodi, laboriosam, quaerat voluptas doloribus earum, distinctio exercitationem ad nam adipisci nesciunt explicabo?</p>
+  <p>Tenetur perspiciatis ducimus minus dicta aliquid exercitationem necessitatibus. Dignissimos dolore quo nisi. Ipsum deleniti expedita culpa dolorem libero repellat sequi quia doloremque, sapiente, id, cumque cum suscipit blanditiis nam atque.</p>
+  <p>Illo voluptate quo deserunt rem sint iusto deleniti, nemo vero ipsum tempore! Corrupti, necessitatibus exercitationem distinctio vero magni perspiciatis ipsa, fugiat est veniam beatae adipisci reprehenderit alias. Odit, dicta! Vel.</p>
+</div> 
+<script>
+  // $("p").css("color" , "blue")
+
+  // p 중에 span 가진 p태그
+  // $("p:has(span)").css("color" , "red")
+  $("p").has("span").css("color" , "tan")
+
+  //p 태그의 내용에 asp라는 문자열 내용물 가지고 있는 놈 배경색 빨강
+  // $("p:contains('asp')").css("color" , "red")
+
+  let pattern = /maio/;
+
+  const pList = $("div>p");
+  // alert(pList[1])
+
+  pList.each(function() {
+  let elem = $(this); // jQuery 객체로 변환
+  let text = elem.text(); // 요소의 텍스트 내용 가져오기
+
+  if (pattern.test(text)) { // 텍스트에 pattern이 있는지 검사
+    elem.css("color", "red");
+  }
+})
+
+  $("p").val()
+
+</script>
+</body>
+</html>
